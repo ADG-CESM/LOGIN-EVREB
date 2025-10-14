@@ -12,15 +12,100 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+/*@media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+}*/s
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* App header */
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 20px;
+  border-bottom: 1px solid #e6e6e6;
+  background: linear-gradient(90deg,#fff,#f8fbff);
+}
+.header-title {
+  font-weight: 700;
+  color: #0b3d91;
+  font-size: 18px;
+}
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.user-name {
+  font-weight: 600;
+  color: #0b3d91;
+}
+
+/* Card and layout */
+.page-container {
+  padding: 28px;
+  display: flex;
+  justify-content: center;
+}
+.card {
+  background: #ffffff;
+  border: 1px solid #eef2ff;
+  box-shadow: 0 6px 18px rgba(12, 35, 80, 0.06);
+  border-radius: 10px;
+}
+.form-card {
+  padding: 20px 26px;
+  max-width: 520px;
+  width: 100%;
+}
+.form-title {
+  margin: 0 0 12px 0;
+  color: #0b3d91;
+}
+
+/* Form fields */
+.form-grid { display: grid; gap: 12px; }
+.field { display: flex; flex-direction: column; gap: 6px; }
+.label-text { font-size: 13px; color: #334155; }
+.input {
+  padding: 10px 12px;
+  border: 1px solid #dbe6ff;
+  border-radius: 8px;
+  font-size: 15px;
+}
+.input:focus { outline: 2px solid rgba(11,61,145,0.12); border-color: #0b3d91; }
+
+/* Buttons */
+.btn {
+  background: #0b3d91;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.btn[disabled] { opacity: 0.6; cursor: default; }
+.btn-link { background: transparent; color: #0b3d91; padding: 6px 10px; }
+
+.muted { color: #6b7280; font-size: 14px; margin-top: 10px; }
+
+.error {
+  margin-top: 8px;
+  color: #b91c1c;
+  background: #fff1f2;
+  border: 1px solid #fecaca;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+

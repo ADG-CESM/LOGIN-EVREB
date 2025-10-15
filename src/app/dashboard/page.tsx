@@ -1,20 +1,11 @@
-// src/app/dashboard/page.tsx
-import { auth } from "@/auth";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/auth";
 import { redirect } from "next/navigation";
+import LogoutButton from "./logout-btn";
 
 export default async function DashboardPage() {
-    const session = await auth();
-    const sess = session as unknown;
-    const sessObj = (sess && typeof sess === "object") ? (sess as Record<string, unknown>) : undefined;
-    const user = (sessObj ? (sessObj["user"] as unknown) : undefined) as {
-        id?: string;
-        username?: string;
-        nombre?: string;
-        apellido?: string;
-        plantel?: string;
-        semestre?: number;
-        rol?: string;
-    } | undefined;
+    const session = await getServerSession(authOptions);
+    const user = session?.user;
     if (!user) redirect("/login");
 
     return (
@@ -26,6 +17,7 @@ export default async function DashboardPage() {
                 <li>Semestre: {user.semestre}</li>
                 <li>Rol: {user.rol}</li>
             </ul>
+            <LogoutButton />
         </main>
     );
 }

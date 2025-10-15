@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import Header from "./ui/header";
 import Providers from "./providers";
-
+import Header from "./ui/header";
 import "./globals.css";
 
 export const metadata: Metadata = { title: "App" };

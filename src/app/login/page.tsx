@@ -1,62 +1,80 @@
-// src/app/login/page.tsx
 "use client";
-import { signIn, type SignInResponse } from "next-auth/react";
-import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { signIn } from "next-auth/react";
+import Link from "next/link";
+import { useEffect, useMemo, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 
 export default function LoginPage() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState("");
+    const [submitting, setSubmitting] = useState(false);
+    const [errorMsg, setErrorMsg] = useState<string | null>(null);
     const router = useRouter();
+    const searchParams = useSearchParams();
+
+    // If NextAuth redirected here with ?error=CredentialsSignin, show a friendly message
+    const errorFromQuery = useMemo(() => searchParams.get("error"), [searchParams]);
+    useEffect(() => {
+        if (!errorFromQuery) return;
+        // Map known NextAuth error codes to Spanish messages
+        const map: Record<string, string> = {
+            CredentialsSignin: "Usuario o contraseña incorrectos.",
+            AccessDenied: "Acceso denegado.",
+            Default: "Ocurrió un error al iniciar sesión.",
+        };
+        setErrorMsg(map[errorFromQuery] ?? map.Default);
+    }, [errorFromQuery]);
 
     async function onSubmit(e: React.FormEvent) {
         e.preventDefault();
-        setError("");
-        setLoading(true);
+        setErrorMsg(null);
+        setSubmitting(true);
+        try {
+            const res = await signIn("credentials", {
+                username,
+                password,
+                redirect: false,
+                // We’ll navigate manually on success
+            });
 
-        // Request sign-in without automatic redirect so we can show friendly errors
-        const res = (await signIn("credentials", {
-            username,
-            password,
-            redirect: false,
-        })) as SignInResponse | undefined;
+            if (res?.error) {
+                // NextAuth returns 'CredentialsSignin' for bad credentials
+                setErrorMsg("Usuario o contraseña incorrectos.");
+                return;
+            }
 
-        setLoading(false);
-
-        // If NextAuth returns an error, show a friendly message
-        if (res && res.error) {
-            setError("Usuario o contraseña incorrectos. Revisa tus datos y vuelve a intentar.");
-            return;
+            // On success, NextAuth may return a URL; prefer it if present
+            if (res?.url) {
+                // Ensure we respect basePath in the returned URL
+                router.push(res.url);
+            } else {
+                router.push("/evreb/dashboard");
+            }
+        } catch {
+            setErrorMsg("No se pudo iniciar sesión. Inténtalo de nuevo.");
+        } finally {
+            setSubmitting(false);
         }
-
-        // Successful sign-in: navigate to dashboard
-        router.push("/dashboard");
     }
 
     return (
-        <main className="page-container">
-            <div className="card form-card">
-                <h1 className="form-title text-2xl">Iniciar sesión</h1>
-
-                <form onSubmit={onSubmit} className="form-grid" aria-label="Formulario de inicio de sesión">
-                    <label className="field">
-                        <span className="label-text">Usuario</span>
-                        <input className="input" placeholder="No. de cuenta" value={username} onChange={(e) => setUsername(e.target.value)} required />
-                    </label>
-
-                    <label className="field">
-                        <span className="label-text">Contraseña</span>
-                        <input className="input" type="password" placeholder="Tu contraseña" value={password} onChange={(e) => setPassword(e.target.value)} required />
-                    </label>
-
-                    <button className="btn" type="submit" disabled={loading}>{loading ? 'Ingresando…' : 'Entrar'}</button>
-                    {error ? <div className="error" role="alert">{error}</div> : null}
-                </form>
-
-                <p className="muted">¿No tienes cuenta? <a href="/register">Regístrate</a></p>
-            </div>
+        <main style={{ padding: 24 }}>
+            <h1>Iniciar sesión</h1>
+            <form onSubmit={onSubmit} style={{ display: "grid", gap: 12, maxWidth: 320 }}>
+                {errorMsg && (
+                    <div style={{ color: "#b91c1c", background: "#fee2e2", padding: 8, borderRadius: 6 }}>
+                        {errorMsg}
+                    </div>
+                )}
+                <input placeholder="Usuario" value={username} onChange={(e) => setUsername(e.target.value)} required />
+                <input type="password" placeholder="Contraseña" value={password} onChange={(e) => setPassword(e.target.value)} required />
+                <button type="submit" disabled={submitting}>
+                    {submitting ? "Ingresando…" : "Entrar"}
+                </button>
+            </form>
+            <p style={{ marginTop: 12 }}>
+                ¿No tienes cuenta? <Link href="/register">Regístrate</Link>
+            </p>
         </main>
     );
 }

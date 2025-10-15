@@ -1,7 +1,6 @@
-// src/app/register/page.tsx
 "use client";
-import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export default function RegisterPage() {
     const [form, setForm] = useState({
@@ -11,7 +10,7 @@ export default function RegisterPage() {
         apellido: "",
         plantel: "",
         semestre: "",
-        rol: "alumno",
+        rol: "alumno"
     });
     const router = useRouter();
 
@@ -21,10 +20,10 @@ export default function RegisterPage() {
 
     async function onSubmit(e: React.FormEvent) {
         e.preventDefault();
-        const res = await fetch("/api/register", {
+        const res = await fetch("/evreb/api/register", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ ...form, semestre: Number(form.semestre) }),
+            body: JSON.stringify({ ...form, semestre: Number(form.semestre) })
         });
         if (res.ok) {
             alert("Registro exitoso. Inicia sesión.");
@@ -36,52 +35,21 @@ export default function RegisterPage() {
     }
 
     return (
-        <main className="page-container">
-            <div className="card form-card">
-                <h1 className="form-title">Registro de alumno</h1>
-
-                <form onSubmit={onSubmit} className="form-grid" aria-label="Formulario de registro">
-                    <label className="field">
-                        <span className="label-text">Nombre</span>
-                        <input className="input" placeholder="Ej. Juan" value={form.nombre} onChange={(e) => set("nombre", e.target.value)} required />
-                    </label>
-
-                    <label className="field">
-                        <span className="label-text">Apellido</span>
-                        <input className="input" placeholder="Ej. Pérez" value={form.apellido} onChange={(e) => set("apellido", e.target.value)} required />
-                    </label>
-
-                    <label className="field">
-                        <span className="label-text">Correo o usuario</span>
-                        <input className="input" placeholder="usuario o correo" value={form.username} onChange={(e) => set("username", e.target.value)} required />
-                    </label>
-
-                    <label className="field">
-                        <span className="label-text">Contraseña</span>
-                        <input className="input" type="password" placeholder="Crea una contraseña segura" value={form.password} onChange={(e) => set("password", e.target.value)} required />
-                    </label>
-
-                    <label className="field">
-                        <span className="label-text">Plantel</span>
-                        <input className="input" placeholder="Ej. Plantel UNAM" value={form.plantel} onChange={(e) => set("plantel", e.target.value)} required />
-                    </label>
-
-                    <label className="field">
-                        <span className="label-text">Semestre</span>
-                        <input className="input" type="number" min={1} max={12} placeholder="1" value={form.semestre} onChange={(e) => set("semestre", e.target.value)} required />
-                    </label>
-
-                    <label className="field">
-                        <span className="label-text">Rol</span>
-                        <select className="input" value={form.rol} onChange={(e) => set("rol", e.target.value as typeof form.rol)}>
-                            <option value="alumno">Alumno</option>
-                            <option value="admin">Admin</option>
-                        </select>
-                    </label>
-
-                    <button className="btn" type="submit">Crear cuenta</button>
-                </form>
-            </div>
+        <main style={{ padding: 24 }}>
+            <h1>Registro</h1>
+            <form onSubmit={onSubmit} style={{ display: "grid", gap: 12, maxWidth: 420 }}>
+                <input placeholder="Usuario" value={form.username} onChange={(e) => set("username", e.target.value)} required />
+                <input type="password" placeholder="Contraseña" value={form.password} onChange={(e) => set("password", e.target.value)} required />
+                <input placeholder="Nombre" value={form.nombre} onChange={(e) => set("nombre", e.target.value)} required />
+                <input placeholder="Apellido" value={form.apellido} onChange={(e) => set("apellido", e.target.value)} required />
+                <input placeholder="Plantel" value={form.plantel} onChange={(e) => set("plantel", e.target.value)} required />
+                <input type="number" placeholder="Semestre (1-12)" min={1} max={12} value={form.semestre} onChange={(e) => set("semestre", e.target.value)} required />
+                <select value={form.rol} onChange={(e) => set("rol", e.target.value as "alumno" | "admin")}>
+                    <option value="alumno">alumno</option>
+                    <option value="admin">admin</option>
+                </select>
+                <button type="submit">Crear cuenta</button>
+            </form>
         </main>
     );
 }

@@ -26,8 +26,8 @@ export default function RegisterPage() {
             body: JSON.stringify({ ...form, semestre: Number(form.semestre) })
         });
         if (res.ok) {
-            alert("Registro exitoso. Inicia sesión.");
-            router.push("/login");
+            // Evita alert bloqueante y navega con una bandera para mostrar mensaje en login
+            router.replace("/login?registered=1");
         } else {
             const data = await res.json().catch(() => ({}));
             alert(data?.error ?? "Error en registro");
@@ -35,21 +35,44 @@ export default function RegisterPage() {
     }
 
     return (
-        <main style={{ padding: 24 }}>
-            <h1>Registro</h1>
-            <form onSubmit={onSubmit} style={{ display: "grid", gap: 12, maxWidth: 420 }}>
-                <input placeholder="Usuario" value={form.username} onChange={(e) => set("username", e.target.value)} required />
-                <input type="password" placeholder="Contraseña" value={form.password} onChange={(e) => set("password", e.target.value)} required />
-                <input placeholder="Nombre" value={form.nombre} onChange={(e) => set("nombre", e.target.value)} required />
-                <input placeholder="Apellido" value={form.apellido} onChange={(e) => set("apellido", e.target.value)} required />
-                <input placeholder="Plantel" value={form.plantel} onChange={(e) => set("plantel", e.target.value)} required />
-                <input type="number" placeholder="Semestre (1-12)" min={1} max={12} value={form.semestre} onChange={(e) => set("semestre", e.target.value)} required />
-                <select value={form.rol} onChange={(e) => set("rol", e.target.value as "alumno" | "admin")}>
-                    <option value="alumno">alumno</option>
-                    <option value="admin">admin</option>
-                </select>
-                <button type="submit">Crear cuenta</button>
-            </form>
+        <main className="page-container">
+            <div className="card form-card">
+                <h1 className="form-title text-2xl">Registro</h1>
+                <form onSubmit={onSubmit} className="form-grid">
+                    <div className="field">
+                        <label className="label-text">Usuario</label>
+                        <input className="input" placeholder="Usuario" value={form.username} onChange={(e) => set("username", e.target.value)} required />
+                    </div>
+                    <div className="field">
+                        <label className="label-text">Contraseña</label>
+                        <input className="input" type="password" placeholder="Contraseña" value={form.password} onChange={(e) => set("password", e.target.value)} required />
+                    </div>
+                    <div className="field">
+                        <label className="label-text">Nombre</label>
+                        <input className="input" placeholder="Nombre" value={form.nombre} onChange={(e) => set("nombre", e.target.value)} required />
+                    </div>
+                    <div className="field">
+                        <label className="label-text">Apellido</label>
+                        <input className="input" placeholder="Apellido" value={form.apellido} onChange={(e) => set("apellido", e.target.value)} required />
+                    </div>
+                    <div className="field">
+                        <label className="label-text">Plantel</label>
+                        <input className="input" placeholder="Plantel" value={form.plantel} onChange={(e) => set("plantel", e.target.value)} required />
+                    </div>
+                    <div className="field">
+                        <label className="label-text">Semestre (1-12)</label>
+                        <input className="input" type="number" placeholder="Semestre (1-12)" min={1} max={12} value={form.semestre} onChange={(e) => set("semestre", e.target.value)} required />
+                    </div>
+                    <div className="field">
+                        <label className="label-text">Rol</label>
+                        <select className="input" value={form.rol} onChange={(e) => set("rol", e.target.value as "alumno" | "admin")}>
+                            <option value="alumno">alumno</option>
+                            <option value="admin">admin</option>
+                        </select>
+                    </div>
+                    <button className="btn" type="submit">Crear cuenta</button>
+                </form>
+            </div>
         </main>
     );
 }

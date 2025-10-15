@@ -9,11 +9,13 @@ export default function LoginPage() {
     const [password, setPassword] = useState("");
     const [submitting, setSubmitting] = useState(false);
     const [errorMsg, setErrorMsg] = useState<string | null>(null);
+    const [infoMsg, setInfoMsg] = useState<string | null>(null);
     const router = useRouter();
     const searchParams = useSearchParams();
 
     // If NextAuth redirected here with ?error=CredentialsSignin, show a friendly message
     const errorFromQuery = useMemo(() => searchParams.get("error"), [searchParams]);
+    const registeredFlag = useMemo(() => searchParams.get("registered"), [searchParams]);
     useEffect(() => {
         if (!errorFromQuery) return;
         // Map known NextAuth error codes to Spanish messages
@@ -24,6 +26,11 @@ export default function LoginPage() {
         };
         setErrorMsg(map[errorFromQuery] ?? map.Default);
     }, [errorFromQuery]);
+    useEffect(() => {
+        if (registeredFlag === "1") {
+            setInfoMsg("Registro exitoso. Ahora ingresa tus credenciales.");
+        }
+    }, [registeredFlag]);
 
     async function onSubmit(e: React.FormEvent) {
         e.preventDefault();
@@ -34,22 +41,15 @@ export default function LoginPage() {
                 username,
                 password,
                 redirect: false,
-                // We’ll navigate manually on success
             });
 
             if (res?.error) {
-                // NextAuth returns 'CredentialsSignin' for bad credentials
                 setErrorMsg("Usuario o contraseña incorrectos.");
                 return;
             }
 
-            // On success, NextAuth may return a URL; prefer it if present
-            if (res?.url) {
-                // Ensure we respect basePath in the returned URL
-                router.push(res.url);
-            } else {
-                router.push("/evreb/dashboard");
-            }
+            // Navegar al dashboard (Next añade basePath automáticamente)
+            router.push("/dashboard");
         } catch {
             setErrorMsg("No se pudo iniciar sesión. Inténtalo de nuevo.");
         } finally {
@@ -58,23 +58,44 @@ export default function LoginPage() {
     }
 
     return (
-        <main style={{ padding: 24 }}>
-            <h1>Iniciar sesión</h1>
-            <form onSubmit={onSubmit} style={{ display: "grid", gap: 12, maxWidth: 320 }}>
-                {errorMsg && (
-                    <div style={{ color: "#b91c1c", background: "#fee2e2", padding: 8, borderRadius: 6 }}>
-                        {errorMsg}
+        <main className="page-container">
+            <div className="card form-card">
+                <h1 className="form-title text-2xl">Iniciar sesión</h1>
+                <form onSubmit={onSubmit} className="form-grid">
+                    {infoMsg && <div className="muted">{infoMsg}</div>}
+                    {errorMsg && <div className="error">{errorMsg}</div>}
+                    <div className="field">
+                        <label className="label-text">Usuario</label>
+                        <input
+                            className="input"
+                            placeholder="Usuario"
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)}
+                            required
+                            autoComplete="username"
+                            autoFocus
+                            inputMode="text"
+                        />
                     </div>
-                )}
-                <input placeholder="Usuario" value={username} onChange={(e) => setUsername(e.target.value)} required />
-                <input type="password" placeholder="Contraseña" value={password} onChange={(e) => setPassword(e.target.value)} required />
-                <button type="submit" disabled={submitting}>
-                    {submitting ? "Ingresando…" : "Entrar"}
-                </button>
-            </form>
-            <p style={{ marginTop: 12 }}>
-                ¿No tienes cuenta? <Link href="/register">Regístrate</Link>
-            </p>
+                    <div className="field">
+                        <label className="label-text">Contraseña</label>
+                        <input
+                            className="input"
+                            type="password"
+                            placeholder="Contraseña"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            required
+                            autoComplete="current-password"
+                            inputMode="text"
+                        />
+                    </div>
+                    <button className="btn" type="submit" disabled={submitting}>
+                        {submitting ? "Ingresando…" : "Entrar"}
+                    </button>
+                </form>
+                <p className="muted">¿No tienes cuenta? <Link href="/register">Regístrate</Link></p>
+            </div>
         </main>
     );
 }

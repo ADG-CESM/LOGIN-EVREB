@@ -60,8 +60,8 @@ export default function RegisterPage() {
                         <input className="input" placeholder="Plantel" value={form.plantel} onChange={(e) => set("plantel", e.target.value)} required />
                     </div>
                     <div className="field">
-                        <label className="label-text">Semestre (1-12)</label>
-                        <input className="input" type="number" placeholder="Semestre (1-12)" min={1} max={12} value={form.semestre} onChange={(e) => set("semestre", e.target.value)} required />
+                        <label className="label-text">Semestre (1-6)</label>
+                        <input className="input" type="number" placeholder="Semestre (1-6)" min={1} max={6} value={form.semestre} onChange={(e) => set("semestre", e.target.value)} required />
                     </div>
                     <div className="field">
                         <label className="label-text">Rol</label>

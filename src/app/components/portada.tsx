@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { GraduationCap, Newspaper, Link as LinkIcon } from "lucide-react";
 
@@ -83,13 +82,14 @@ export default function Portada() {
                                     <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
                                 </div>
                                 <div className="overflow-hidden rounded-xl border border-indigo-100/70 bg-gradient-to-br from-indigo-50 to-blue-50">
-                                    <Image
-                                        src="/evreb/web.svg"
-                                        alt="Vista ilustrativa de recursos"
-                                        width={900}
-                                        height={600}
-                                        priority
+                                    <video
                                         className="h-64 w-full object-contain p-6 sm:h-80"
+                                        src="/evreb/video_animado.mp4"
+                                        autoPlay
+                                        muted
+                                        playsInline
+                                        preload="auto"
+                                        aria-label="Animación ilustrativa de recursos"
                                     />
                                 </div>
                             </div>

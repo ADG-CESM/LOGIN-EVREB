@@ -37,7 +37,7 @@ export default function Portada() {
                         {/* Acciones */}
                         <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
                             <Link
-                                href="/tablero"
+                                href="/dashboard/tablero"
                                 className="inline-flex items-center justify-center rounded-xl bg-[#193d77] px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[#163463] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#193d77]/50 active:scale-[0.99]"
                             >
                                 Explorar tablero

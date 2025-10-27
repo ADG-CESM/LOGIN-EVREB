@@ -29,7 +29,15 @@ export default function Header() {
                         </span>
                         <button
                             className="btn btn-light"
-                            onClick={() => signOut({ callbackUrl: "/evreb/login" })}
+                            onClick={async () => {
+                                const origin = typeof window !== "undefined" ? window.location.origin : "";
+                                const callbackUrl = `${origin}/evreb/login`;
+                                try {
+                                    await signOut({ callbackUrl, redirect: false });
+                                } finally {
+                                    if (typeof window !== "undefined") window.location.href = callbackUrl;
+                                }
+                            }}
                         >
                             Cerrar sesión
                         </button>

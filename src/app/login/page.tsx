@@ -1,10 +1,9 @@
 "use client";
 import { signIn } from "next-auth/react";
-import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { Suspense, useEffect, useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
-export default function LoginPage() {
+function LoginForm() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [submitting, setSubmitting] = useState(false);
@@ -13,12 +12,11 @@ export default function LoginPage() {
     const router = useRouter();
     const searchParams = useSearchParams();
 
-    // If NextAuth redirected here with ?error=CredentialsSignin, show a friendly message
     const errorFromQuery = useMemo(() => searchParams.get("error"), [searchParams]);
     const registeredFlag = useMemo(() => searchParams.get("registered"), [searchParams]);
+
     useEffect(() => {
         if (!errorFromQuery) return;
-        // Map known NextAuth error codes to Spanish messages
         const map: Record<string, string> = {
             CredentialsSignin: "Usuario o contraseña incorrectos.",
             AccessDenied: "Acceso denegado.",
@@ -26,6 +24,7 @@ export default function LoginPage() {
         };
         setErrorMsg(map[errorFromQuery] ?? map.Default);
     }, [errorFromQuery]);
+
     useEffect(() => {
         if (registeredFlag === "1") {
             setInfoMsg("Registro exitoso. Ahora ingresa tus credenciales.");
@@ -48,8 +47,7 @@ export default function LoginPage() {
                 return;
             }
 
-            // Navegar al dashboard (Next añade basePath automáticamente)
-            router.push("/dashboard");
+            router.push("/dashboard/tablero");
         } catch {
             setErrorMsg("No se pudo iniciar sesión. Inténtalo de nuevo.");
         } finally {
@@ -94,8 +92,22 @@ export default function LoginPage() {
                         {submitting ? "Ingresando…" : "Entrar"}
                     </button>
                 </form>
-                <p className="muted">¿No tienes cuenta? <Link href="/register">Regístrate</Link></p>
+                {/*<p className="muted">¿No tienes cuenta? <Link href="/register">Regístrate</Link></p>*/}
             </div>
         </main>
+    );
+}
+
+export default function LoginPage() {
+    return (
+        <Suspense fallback={
+            <main className="page-container">
+                <div className="card form-card">
+                    <h1 className="form-title text-2xl">Cargando...</h1>
+                </div>
+            </main>
+        }>
+            <LoginForm />
+        </Suspense>
     );
 }

@@ -256,7 +256,7 @@ export default function TableroClient() {
             { RUA: 0, CCH: 0, Referencias: 0 }
         );
         if (counts[selectedUbication] === 0) {
-            const fallback = (['RUA', 'CCH', 'Referencias'] as const).find(k => counts[k] > 0);
+            const fallback = (['Referencias', 'RUA', 'CCH'] as const).find(k => counts[k] > 0);
             if (fallback && fallback !== selectedUbication) {
                 setSelectedUbication(fallback);
             }
@@ -321,6 +321,13 @@ export default function TableroClient() {
 
                                         const options: Array<{ label: string; value: 'RUA' | 'CCH' | 'Referencias'; icon: ReactNode; count: number; title: string }> = [
                                             {
+                                                label: 'Referencias',
+                                                value: 'Referencias',
+                                                icon: <LinkIcon className="w-4 h-4" />,
+                                                count: counts.Referencias,
+                                                title: 'Referencias digitales externas'
+                                            },
+                                            {
                                                 label: 'RUA',
                                                 value: 'RUA',
                                                 icon: <Newspaper className="w-4 h-4" />,
@@ -334,13 +341,7 @@ export default function TableroClient() {
                                                 count: counts.CCH,
                                                 title: 'Recursos del Portal Académico CCH'
                                             },
-                                            {
-                                                label: 'Referencias',
-                                                value: 'Referencias',
-                                                icon: <LinkIcon className="w-4 h-4" />,
-                                                count: counts.Referencias,
-                                                title: 'Referencias digitales externas'
-                                            }
+
                                         ];
 
                                         return options.map(opt => {

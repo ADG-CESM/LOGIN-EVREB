@@ -51,6 +51,7 @@ export function MateriaCard({
                         url={url}
                         urlMaterial={urlMaterial}
                         ubication={ubication}
+                        type={type}
                         title={title}
                     />
                 </div>
@@ -63,6 +64,7 @@ export function MateriaCard({
                         url={url}
                         urlMaterial={urlMaterial}
                         ubication={ubication}
+                        type={type}
                         title={title}
                     />
                 </div>

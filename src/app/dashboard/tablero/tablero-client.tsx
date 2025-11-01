@@ -232,6 +232,41 @@ const materialsByAulas: Record<string, Material[]> = {
             "type": "web"
         }
     ],
+    4: [],
+    5: [],
+    6: [],
+    7: [],
+    8: [
+        {
+            "id": 1,
+            "title": "Introducción a la informática",
+            "descripcion": "Ferreyra, G. (2011) Informática: para cursos de bachillerato. Alfaomega.",
+            "url": "https://libroweb.alfaomega.com.mx/book/informatica_para_bachillerato_1er",
+            "urlMaterial": "https://libroweb.alfaomega.com.mx/book/informatica_para_bachillerato_1er",
+            "ubication": "Referencias",
+            "type": "web"
+        },
+        {
+            "id": 2,
+            "title": "Taller de Cómputo",
+            "descripcion": "Patiño Gutiérrez, J. (2013) Modelos de Computación. Universidad Politécnica del Estado de Morelos.",
+            "url": "https://www.researchgate.net/publication/262871304_Arquitectura_de_las_computadoras_y_la_computacion_cuantica",
+            "urlMaterial": "https://www.researchgate.net/publication/262871304_Arquitectura_de_las_computadoras_y_la_computacion_cuantica",
+            "ubication": "Referencias",
+            "type": "web"
+        },
+        {
+            "id": 3,
+            "title": "Taller de Cómputo",
+            "descripcion": "Becerril Balín, L., & Badia Garganté, A. (2013). La competencia informacional en la Educación Secundaria. Demanda de aprendizaje y resolución colaborativa de problemas relativos a la información con apoyo de las TIC: Information literacy in Secondary Education. Task learning and ICT-supported collaborative solving of information problems. Ministerio de Educación",
+            "url": "https://www.educacionfpydeportes.gob.es/dam/jcr:d15a23a8-72e3-4bbf-9f5a-28fec1475198/re36224-pdf.pdf",
+            "urlMaterial": "https://www.educacionfpydeportes.gob.es/dam/jcr:d15a23a8-72e3-4bbf-9f5a-28fec1475198/re36224-pdf.pdf",
+            "ubication": "Referencias",
+            "type": "web"
+        },
+
+    ],
+    9: [],
 };
 
 export default function TableroClient() {

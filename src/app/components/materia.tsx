@@ -76,7 +76,9 @@ export function MateriaCard({
                             ? "/evreb/video.svg"
                             : lowerType === "pdf"
                                 ? "/evreb/doc2.svg"
-                                : "/evreb/web.svg"
+                                : lowerType === "podcast"
+                                    ? "/evreb/audio.svg"
+                                    : "/evreb/web.svg"
                     }
                     alt={title}
                     width={600}

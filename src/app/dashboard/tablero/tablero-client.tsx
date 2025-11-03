@@ -239,7 +239,7 @@ const materialsByAulas: Record<string, Material[]> = {
     8: [
         {
             "id": 1,
-            "title": "Introducción a la informática",
+            "title": "Informática: para cursos de bachillerato",
             "descripcion": "Ferreyra, G. (2011) Informática: para cursos de bachillerato. Alfaomega.",
             "url": "https://libroweb.alfaomega.com.mx/book/informatica_para_bachillerato_1er",
             "urlMaterial": "https://libroweb.alfaomega.com.mx/book/informatica_para_bachillerato_1er",
@@ -248,7 +248,7 @@ const materialsByAulas: Record<string, Material[]> = {
         },
         {
             "id": 2,
-            "title": "Taller de Cómputo",
+            "title": "Modelos de Computación",
             "descripcion": "Patiño Gutiérrez, J. (2013) Modelos de Computación. Universidad Politécnica del Estado de Morelos.",
             "url": "https://www.researchgate.net/publication/262871304_Arquitectura_de_las_computadoras_y_la_computacion_cuantica",
             "urlMaterial": "https://www.researchgate.net/publication/262871304_Arquitectura_de_las_computadoras_y_la_computacion_cuantica",
@@ -257,11 +257,47 @@ const materialsByAulas: Record<string, Material[]> = {
         },
         {
             "id": 3,
-            "title": "Taller de Cómputo",
-            "descripcion": "Becerril Balín, L., & Badia Garganté, A. (2013). La competencia informacional en la Educación Secundaria. Demanda de aprendizaje y resolución colaborativa de problemas relativos a la información con apoyo de las TIC: Information literacy in Secondary Education. Task learning and ICT-supported collaborative solving of information problems. Ministerio de Educación",
-            "url": "https://www.educacionfpydeportes.gob.es/dam/jcr:d15a23a8-72e3-4bbf-9f5a-28fec1475198/re36224-pdf.pdf",
-            "urlMaterial": "https://www.educacionfpydeportes.gob.es/dam/jcr:d15a23a8-72e3-4bbf-9f5a-28fec1475198/re36224-pdf.pdf",
+            "title": "Software libre vs software propietario",
+            "descripcion": "Culebro, M., Gómez, W. G., Torres, S. (2006). Software libre vs software propietario. Ventajas y desventajas. Creative Commons",
+            "url": "https://www.academia.edu/9690867/Software_libre_vs_software_propietario_Ventajas_y_desventajas",
+            "urlMaterial": "https://www.academia.edu/9690867/Software_libre_vs_software_propietario_Ventajas_y_desventajas",
             "ubication": "Referencias",
+            "type": "web"
+        },
+        {
+            "id": 4,
+            "title": "Social media marketing, redes sociales y metaversos",
+            "descripcion": "Fernández, E. S. M., García, M. L. M., & Jiménez, F. J. B. (2008). Social media marketing, redes sociales y metaversos. Universidad, Sociedad y Mercados Globales. pp. 353-366.",
+            "url": "https://dialnet.unirioja.es/servlet/articulo?codigo=2751765",
+            "urlMaterial": "https://dialnet.unirioja.es/servlet/articulo?codigo=2751765",
+            "ubication": "Referencias",
+            "type": "web"
+        },
+        {
+            "id": 5,
+            "title": "¿Quieres aprender más sobre el tema Software Libre?",
+            "descripcion": "Texto donde se explora qué es un software que no es libre: software privado, freeware, shareware, adware, software privativo y, por último, software comercial.",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/19506",
+            "urlMaterial": "https://induccion.educatic.unam.mx/mod/book/tool/print/index.php?id=1075&chapterid=488",
+            "ubication": "RUA",
+            "type": "web"
+        },
+        {
+            "id": 6,
+            "title": "El potencial del software libre en la gestión de información en bibliotecas",
+            "descripcion": "Artículo expone los fundamentos éticos y tecnológicos que dieron origen al movimiento del software libre, así como la relación que este movimiento guarda con el mundo de las bibliotecas y el manejo de información digital. A su vez presenta algunas de las aplicaciones más populares de software libre que existen para la gestión de información en bibliotecas, a fin de mostrar los alcances y posibilidades que dichas aplicaciones tienen en la creación de sistemas de información a bajo costo, acordes con el ideal de un ciberespacio público.",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/8291",
+            "urlMaterial": "https://www.paginaspersonales.unam.mx/files/630/Publica_20130111215056.pdf",
+            "ubication": "RUA",
+            "type": "PDF"
+        },
+        {
+            "id": 7,
+            "title": "Paquete Didáctico para Taller de Cómputo",
+            "descripcion": "El material que se presenta es un auxiliar en la enseñanza del Taller de cómputo ya que permite que los alumnos trabajen con los materiales seleccionados por el profesor de manera individual, y el trabajo del profesor se centre en corregir y explicar las dudas de concepto o manejo que se presenten en clase, además permite que los alumnos aprendan de acuerdo a su propio ritmo, y que los alumnos más avanzados desarrollen otras secuencias del paquete.",
+            "url": "https://portalacademico.cch.unam.mx/recursos-de-apoyo/matematicas/paquete-didactico-para-taller-de-computo",
+            "urlMaterial": "https://portalacademico.cch.unam.mx/recursos-de-apoyo/matematicas/paquete-didactico-para-taller-de-computo",
+            "ubication": "CCH",
             "type": "web"
         },
 

@@ -60,7 +60,7 @@ export function Descripcion({ title, descripcion, url, urlMaterial, ubication, t
                     src={urlMaterial}
                     preload="metadata"
                     controls
-                    className="w-full mt-1"
+                    className="w-full mt-1 my-2 rounded-lg bg-gray-100 border border-gray-300"
                 />
             )}
             <div className="flex flex-wrap gap-2 mt-auto mx-auto">

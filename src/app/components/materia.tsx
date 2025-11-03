@@ -1,4 +1,6 @@
-import React from 'react';
+"use client";
+
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { Descripcion } from './description';
 
@@ -25,7 +27,9 @@ export function MateriaCard({
     isSelected = false,
     onClick
 }: MateriaProps) {
+    const [showDescription, setShowDescription] = useState(false);
     const lowerType = type.toLowerCase();
+
     const handleKeyDown = (e: React.KeyboardEvent) => {
         if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();
@@ -40,6 +44,8 @@ export function MateriaCard({
             aria-pressed={isSelected}
             onClick={onClick}
             onKeyDown={handleKeyDown}
+            onMouseEnter={() => setShowDescription(true)}
+            onMouseLeave={() => setShowDescription(false)}
             className={`relative group p-3 sm:p-4 w-full sm:w-[260px] h-[240px] sm:h-[260px] min-w-0 rounded-2xl border border-indigo-100/70 bg-gradient-to-br from-indigo-100 to-blue-100 shadow-sm hover:shadow-lg transition-all duration-200 flex flex-col justify-between focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300 ${isSelected ? 'ring-2 ring-indigo-300 shadow-md' : ''}`}>
 
             {/* Overlay Descripcion: focus en móviles (sm:hidden), hover en escritorio (sm:block) */}
@@ -56,8 +62,12 @@ export function MateriaCard({
                     />
                 </div>
             </div>
-            {/* Escritorio y tablets (>= sm): aparece al hover */}
-            <div className="absolute inset-0 z-20 opacity-0 pointer-events-none transition-opacity duration-200 hidden sm:block sm:group-hover:opacity-100 sm:group-hover:pointer-events-auto">
+            {/* Escritorio y tablets (>= sm): aparece al hover - controlado por estado */}
+            <div
+                className={`absolute inset-0 z-20 transition-opacity duration-200 hidden sm:block ${showDescription ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
+                onMouseEnter={() => setShowDescription(true)}
+                onMouseLeave={() => setShowDescription(false)}
+            >
                 <div className="h-full">
                     <Descripcion
                         descripcion={descripcion ?? title}

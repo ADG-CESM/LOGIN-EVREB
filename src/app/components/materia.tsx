@@ -12,6 +12,7 @@ interface MateriaProps {
     type: string;
     ubication: string;
     descripcion?: string;
+    citaApa?: string;
 
     isSelected?: boolean;
     onClick?: () => void;
@@ -24,6 +25,7 @@ export function MateriaCard({
     type,
     ubication,
     descripcion,
+    citaApa,
     isSelected = false,
     onClick
 }: MateriaProps) {
@@ -59,6 +61,7 @@ export function MateriaCard({
                         ubication={ubication}
                         type={type}
                         title={title}
+                        citaApa={citaApa}
                     />
                 </div>
             </div>
@@ -76,6 +79,7 @@ export function MateriaCard({
                         ubication={ubication}
                         type={type}
                         title={title}
+                        citaApa={citaApa}
                     />
                 </div>
             </div>

@@ -8,10 +8,12 @@ export interface DescripcionProps {
     urlMaterial: string;
     ubication?: string;
     type?: string;
+    citaApa?: string;
 }
-export function Descripcion({ title, descripcion, url, urlMaterial, ubication, type }: DescripcionProps) {
+export function Descripcion({ title, descripcion, url, urlMaterial, ubication, type, citaApa }: DescripcionProps) {
     const audioRef = useRef<HTMLAudioElement | null>(null);
     const [isPlaying, setIsPlaying] = useState(false);
+    const [showCitation, setShowCitation] = useState(false);
 
     const lowerType = (type || "").toLowerCase();
     const isAudioType = lowerType === "podcast" || lowerType === "audio";
@@ -47,6 +49,26 @@ export function Descripcion({ title, descripcion, url, urlMaterial, ubication, t
         };
     }, []);
 
+    // Close citation modal on Escape
+    useEffect(() => {
+        if (!showCitation) return;
+        const onKey = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') setShowCitation(false);
+        };
+        window.addEventListener('keydown', onKey);
+        return () => window.removeEventListener('keydown', onKey);
+    }, [showCitation]);
+
+    const citationText = (citaApa?.trim() || descripcion?.trim() || title);
+
+    const handleCopyCitation = async () => {
+        try {
+            await navigator.clipboard.writeText(citationText);
+        } catch {
+            // ignored
+        }
+    };
+
     return (
         <div className="p-3 sm:p-4 h-full flex flex-col align-center rounded-2xl bg-white/80 backdrop-blur-md border border-indigo-100 shadow-md">
             <h2 className="text-xs sm:text-sm text-center font-semibold text-indigo-900">{title}</h2>
@@ -72,6 +94,16 @@ export function Descripcion({ title, descripcion, url, urlMaterial, ubication, t
                     >Detalles</a>
                 )}
 
+                {ubication === "Referencias" && (
+                    <button
+                        type="button"
+                        onClick={() => setShowCitation(true)}
+                        className="bg-indigo-600 text-white px-3 py-1.5 rounded-xl text-xs sm:text-sm shadow hover:bg-indigo-700 active:scale-[0.99] transition-all"
+                    >
+                        Leer cita
+                    </button>
+                )}
+
                 {isAudio ? (
                     <button
                         type="button"
@@ -93,6 +125,51 @@ export function Descripcion({ title, descripcion, url, urlMaterial, ubication, t
                     </a>
                 )}
             </div>
+
+            {/* Modal de cita APA */}
+            {showCitation && (
+                <div className="fixed inset-0 z-[999] flex items-center justify-center p-4">
+                    <div
+                        className="absolute inset-0 bg-black/40"
+                        onClick={() => setShowCitation(false)}
+                        aria-hidden
+                    />
+                    <div className="relative z-10 w-full sm:w-[260px] max-h-[90vh] overflow-y-auto rounded-2xl bg-white shadow-xl border border-indigo-100">
+                        <div className="p-3 sm:p-4">
+                            <div className="flex items-start justify-between gap-2">
+                                <h3 className="text-sm font-semibold text-indigo-900">Cita APA</h3>
+                                <button
+                                    type="button"
+                                    onClick={() => setShowCitation(false)}
+                                    className="shrink-0 rounded-full p-1 text-slate-600 hover:bg-slate-100"
+                                    aria-label="Cerrar"
+                                >
+                                    ✕
+                                </button>
+                            </div>
+                            <p className="mt-2 text-xs sm:text-sm text-slate-800 whitespace-pre-line break-words leading-relaxed">
+                                {citationText}
+                            </p>
+                            <div className="mt-4 flex flex-wrap gap-2 justify-end">
+                                <button
+                                    type="button"
+                                    onClick={handleCopyCitation}
+                                    className="bg-slate-100 text-slate-800 px-3 py-1.5 rounded-xl text-xs shadow hover:bg-slate-200 active:scale-[0.99] transition-all"
+                                >
+                                    Copiar
+                                </button>
+                                <button
+                                    type="button"
+                                    onClick={() => setShowCitation(false)}
+                                    className="bg-indigo-600 text-white px-3 py-1.5 rounded-xl text-xs shadow hover:bg-indigo-700 active:scale-[0.99] transition-all"
+                                >
+                                    Cerrar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

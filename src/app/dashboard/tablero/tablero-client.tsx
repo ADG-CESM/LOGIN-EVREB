@@ -26,6 +26,7 @@ interface Material {
     ubication: 'RUA' | 'CCH' | 'Referencias';
     type: string;
     descripcion: string;
+    citaApa?: string;
 }
 
 const materialsByAulas: Record<string, Material[]> = {
@@ -171,7 +172,8 @@ const materialsByAulas: Record<string, Material[]> = {
         {
             "id": 1,
             "title": "Análisis e interpretación del poema lírico",
-            "descripcion": "Beristáin, H. (1989). Análisis e interpretación del poema lírico. IIFL/UNAM.",
+            "descripcion": "Texto que difunde la diversidad de orientaciones en el análisis estructural de poemas.",
+            "citaApa": "Ramírez, G. (2011). Helena Beristáin. Análisis e interpretación del poema lírico. México: Universidad Nacional Autónoma de México, 1989. Literatura Mexicana, 2(1), 262-267. https://doi.org/10.19130/iifl.litmex.2.1.1991.41",
             "url": "https://revistas-filologicas.unam.mx/literatura-mexicana/index.php/lm/article/view/41",
             "urlMaterial": "https://revistas-filologicas.unam.mx/literatura-mexicana/index.php/lm/article/view/41",
             "ubication": "Referencias",
@@ -240,7 +242,8 @@ const materialsByAulas: Record<string, Material[]> = {
         {
             "id": 1,
             "title": "Informática: para cursos de bachillerato",
-            "descripcion": "Ferreyra, G. (2011) Informática: para cursos de bachillerato. Alfaomega.",
+            "descripcion": "Libro dirigido a alumnos que se asoman por primera vez al mundo de las computadoras, así como a aquellos que quieren reafirmar sus conocimientos.",
+            "citaApa": "Ferreyra, G. (2011). Informática: para cursos de bachillerato. Alfaomega.",
             "url": "https://libroweb.alfaomega.com.mx/book/informatica_para_bachillerato_1er",
             "urlMaterial": "https://libroweb.alfaomega.com.mx/book/informatica_para_bachillerato_1er",
             "ubication": "Referencias",
@@ -249,7 +252,8 @@ const materialsByAulas: Record<string, Material[]> = {
         {
             "id": 2,
             "title": "Modelos de Computación",
-            "descripcion": "Patiño Gutiérrez, J. (2013) Modelos de Computación. Universidad Politécnica del Estado de Morelos.",
+            "descripcion": "Artículo que explica algunos modelos de arquitectura de computadoras.",
+            "citaApa": "Patiño Gutiérrez, J. (2013). Modelos de Computación. Universidad Politécnica del Estado de Morelos.",
             "url": "https://www.researchgate.net/publication/262871304_Arquitectura_de_las_computadoras_y_la_computacion_cuantica",
             "urlMaterial": "https://www.researchgate.net/publication/262871304_Arquitectura_de_las_computadoras_y_la_computacion_cuantica",
             "ubication": "Referencias",
@@ -258,7 +262,8 @@ const materialsByAulas: Record<string, Material[]> = {
         {
             "id": 3,
             "title": "Software libre vs software propietario",
-            "descripcion": "Culebro, M., Gómez, W. G., Torres, S. (2006). Software libre vs software propietario. Ventajas y desventajas. Creative Commons",
+            "descripcion": "Libro que aborda los conceptos fundamentales del software, el derecho de autor, los tipos de licencias (copyright, copyleft y patentes), así como las ventajas y desventajas del software libre y del software propietario.",
+            "citaApa": "Culebro, M., Gómez, W. G., & Torres, S. (2006). Software libre vs software propietario: Ventajas y desventajas. Creative Commons.",
             "url": "https://www.academia.edu/9690867/Software_libre_vs_software_propietario_Ventajas_y_desventajas",
             "urlMaterial": "https://www.academia.edu/9690867/Software_libre_vs_software_propietario_Ventajas_y_desventajas",
             "ubication": "Referencias",
@@ -267,7 +272,8 @@ const materialsByAulas: Record<string, Material[]> = {
         {
             "id": 4,
             "title": "Social media marketing, redes sociales y metaversos",
-            "descripcion": "Fernández, E. S. M., García, M. L. M., & Jiménez, F. J. B. (2008). Social media marketing, redes sociales y metaversos. Universidad, Sociedad y Mercados Globales. pp. 353-366.",
+            "descripcion": "Artículo que describe de las redes sociales en Internet, sus características, clasificación, localización, segmentación y uso específico para la publicidad.",
+            "citaApa": "Fernández, E. S. M., García, M. L. M., & Jiménez, F. J. B. (2008). Social media marketing, redes sociales y metaversos. En Universidad, Sociedad y Mercados Globales (pp. 353-366).",
             "url": "https://dialnet.unirioja.es/servlet/articulo?codigo=2751765",
             "urlMaterial": "https://dialnet.unirioja.es/servlet/articulo?codigo=2751765",
             "ubication": "Referencias",
@@ -464,6 +470,7 @@ export default function TableroClient() {
                                                     isSelected={selectedMaterialId === material.id}
                                                     onClick={() => handleMaterialClick(material.id)}
                                                     descripcion={material.descripcion}
+                                                    citaApa={material.citaApa}
                                                 />
                                             </div>
                                         ));

@@ -167,7 +167,254 @@ const materialsByAulas: Record<string, Material[]> = {
             "type": "web"
         },
     ],
-    "3": [],
+    "3": [
+        {
+            "id": 1,
+            "title": "Fundamentos de Química",
+            "descripcion": "El acceso al texto completo es sólo para usuarios de REDUNAMEl, por  medio de la DGB UNAM.",
+            "citaApa": "Burns, R. A. (2017). Fundamentos de Química. (5ª Ed). Pearson/Prentice Hall.",
+            "url": "https://research.ebsco.com/c/df24kt/search/details/pcikgdwypf?limiters=&q=Fundamentos%20de%20Qu%C3%ADmica",
+            "urlMaterial": "https://research.ebsco.com/c/df24kt/search/details/pcikgdwypf?limiters=&q=Fundamentos%20de%20Qu%C3%ADmica",
+            "ubication": "Referencias",
+            "type": "web"
+        },
+        {
+            "id": 2,
+            "title": "La transición hacia el desarrollo sustentable. Perspectivas de América Latina y el Caribe",
+            "descripcion": "El libro presenta los análisis, las críticas y las propuestas de los autores sobre el desarrollo sustentable de América Latina y el Caribe.",
+            "citaApa": "Leff, E., Ezcurra, E., Pisanty, I., y Romero, P. (2001). La transición hacia el desarrollo sustentable. Perspectivas de América Latina y el Caribe. Semarnat/INE/UAM Xochimilco/PNUMA.",
+            "url": "http://140.84.163.2:8080/xmlui/handle/publicaciones/133#:~:text=Este%20libro%20es%20resultado%20de%20un%20ejercicio,no%20habr%C3%A1%20nunca%20de%20conformarse%20con%20el",
+            "urlMaterial": "http://140.84.163.2:8080/xmlui/handle/publicaciones/133#:~:text=Este%20libro%20es%20resultado%20de%20un%20ejercicio,no%20habr%C3%A1%20nunca%20de%20conformarse%20con%20el",
+            "ubication": "Referencias",
+            "type": "web"
+        },
+        {
+            "id": 3,
+            "title": "Cambio climático: una visión desde México",
+            "descripcion": "Libro que describe el cambio climático con bases científicas, presenta las reacciones del mundo ante el problema así como los impactos, vulnerabilidades, y acciones para la adaptación, mitigación y sensibilización.",
+            "citaApa": "Martínez, J., Fernández, A. (2004). Cambio climático: una visión desde México. Instituto Nacional de Ecología, Secretaría de Medio Ambiente y Recursos Naturales.",
+            "url": "http://www.data.sedema.cdmx.gob.mx/cambioclimaticocdmx/images/biblioteca_cc/Cambio-climatico-una-vision-desde-Mexico-(Julia-Martinez-y-Adrian-Fernandez-Bremauntz-compilado.pdf",
+            "urlMaterial": "http://www.data.sedema.cdmx.gob.mx/cambioclimaticocdmx/images/biblioteca_cc/Cambio-climatico-una-vision-desde-Mexico-(Julia-Martinez-y-Adrian-Fernandez-Bremauntz-compilado.pdf",
+            "ubication": "Referencias",
+            "type": "web"
+        },
+        {
+            "id": 4,
+            "title": "Seguridad en el laboratorio",
+            "descripcion": "Texto que presenta una introducción sobre los cuidados generales a tener en cuenta para la seguridad en el laboratorio, así como las recomendaciones específicas para la realización de experiencias: materiales y equipamiento eléctrico, sustancias químicas y materiales mecánicos.",
+            "type": "WEB",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/15801",
+            "urlMaterial": "http://users.df.uba.ar/acha/Lab5/seguridadgral.htm",
+            "ubication": "RUA"
+        },
+        {
+            "id": 5,
+            "title": "Reglas de nomenclatura",
+            "descripcion": "Texto que muestra las reglas de nomenclatura para nombrar y formar compuestos como óxidos metálicos, óxidos ácidos, hidróxidos, ácidos e hidrácidos.",
+            "type": "WEB",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/17084",
+            "urlMaterial": "https://e1.portalacademico.cch.unam.mx/alumno/quimica1/u2/oxigeno_elementos/reglas_nomenclatura",
+            "ubication": "RUA"
+        },
+        {
+            "id": 6,
+            "title": "Reacción química: definición y ecuación química",
+            "descripcion": "En este vídeo se explica qué es una reacción química y cómo se puede representar por medio de una ecuación química.",
+            "type": "Video",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/85511",
+            "urlMaterial": "https://youtu.be/GpKN-uZBZfY?si=6eCmrlc1c6tfOsyT",
+            "ubication": "RUA"
+        },
+        {
+            "id": 7,
+            "title": "¿Qué son las fórmulas químicas?",
+            "descripcion": "Video en el cual se expone la representación de los elementos que forman un compuesto y la proporción en que se encuentran, o del número de átomos que forman una molécula.",
+            "type": "Video",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/19867",
+            "urlMaterial": "https://www.youtube.com/watch?v=rbYK5Ig-oXU",
+            "ubication": "RUA"
+        },
+        {
+            "id": 8,
+            "title": "Reacciones de síntesis, descomposición y sustitución (parte 1)",
+            "descripcion": "Video de química en el cual se presentan ejemplos de reacción de síntesis, descomposición y sustitución simple y doble.",
+            "type": "Video",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/19842",
+            "urlMaterial": "https://www.youtube.com/watch?v=RRcYwTfLRjs&t=304s",
+            "ubication": "RUA"
+        },
+        {
+            "id": 9,
+            "title": "AACT: American Association of Chemistry Teachers (Simuladores)",
+            "descripcion": "Sitio web con simuladores de Química ejecutables vía web de acceso libre para distintos niveles escolares.",
+            "type": "WEB",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/87055",
+            "urlMaterial": "https://teachchemistry.org/classroom-resources/simulations",
+            "ubication": "RUA"
+        },
+        {
+            "id": 10,
+            "title": "Aplicaciones químicas en Biomodel",
+            "descripcion": "Sitio web con aplicaciones de Química realizadas con Jmol y JSmol.",
+            "type": "WEB",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/87058",
+            "urlMaterial": "https://biomodel.uah.es/quimica/inicio.htm",
+            "ubication": "RUA"
+        },
+        {
+            "id": 11,
+            "title": "Virtual Lab: Default Virtual Lab Stockroom",
+            "descripcion": "Sitio web que proporciona acceso a un laboratorio virtual de Química desarrollado en HTML5.",
+            "type": "WEB",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/87060",
+            "urlMaterial": "https://chemcollective.org/vlab/vlab.php",
+            "ubication": "RUA"
+        },
+        {
+            "id": 12,
+            "title": "CK-12 Exploration Series",
+            "descripcion": "Sitio web que ofrece un conjunto de simulaciones para la asignatura de Química y Física.",
+            "type": "WEB",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/87067",
+            "urlMaterial": "https://interactives.ck12.org/simulations/chemistry.html",
+            "ubication": "RUA"
+        },
+        {
+            "id": 13,
+            "title": "Sustancias puras",
+            "descripcion": "Recurso que expone los compuestos como sustancias puras de diferentes elementos, identifica los elementos como sustancias puras formadas por el mismo tipo de átomos que no se pueden separar en otras por métodos físicos ni químicos.",
+            "type": "WEB",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/9602",
+            "urlMaterial": "http://www.objetos.unam.mx/quimica/sustancias/index.html",
+            "ubication": "RUA"
+        },
+        {
+            "id": 14,
+            "title": "Tipos de reacciones químicas",
+            "descripcion": "Video en el cual se presentan las explicaciones de las diferentes reacciones químicas y la nomenclatura a la que corresponde cada una, así como el desglose de las ecuaciones.",
+            "type": "Video",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/20102",
+            "urlMaterial": "https://www.youtube.com/watch?v=X2rT0y2cJ4o",
+            "ubication": "RUA"
+        },
+        {
+            "id": 15,
+            "title": "Tabla periódica de los elementos",
+            "descripcion": "Tabla dinámica de los elementos químicos que permite clasificarlos a través de colores de acuerdo con distintas características.",
+            "type": "WEB",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/86984",
+            "urlMaterial": "http://objetos.unam.mx/quimica/tablaPeriodica/",
+            "ubication": "RUA"
+        },
+        {
+            "id": 16,
+            "title": "¿Qué es el agua?",
+            "descripcion": "Artículo en el que se presentan las propiedades químicas y físico-químicas del agua. Se menciona la composición de los elementos del agua y las reacciones que esta tiene con las diferentes sustancias.",
+            "type": "WEB",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/19873",
+            "urlMaterial": "https://agua.org.mx/que-es/#propiedades-fisico-quimicas",
+            "ubication": "RUA"
+        },
+        {
+            "id": 17,
+            "title": "¿Mezcla o compuesto?",
+            "descripcion": "Video que presenta los experimentos mediante los cuales quedan demostrados los procesos químicos a través de los que se muestran las diferencias entre mezclas y compuestos.",
+            "type": "Video",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/19760",
+            "urlMaterial": "https://www.youtube.com/watch?v=benJbAVKGVY",
+            "ubication": "RUA"
+        },
+        {
+            "id": 18,
+            "title": "¿Cuánto sabes de la tabla periódica?",
+            "descripcion": "Interactivo que tiene como objetivo que se comprenda la historia de la clasificación de los elementos químicos y ubicar elementos dentro de la tabla periódica a partir de sus propiedades.",
+            "type": "WEB",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/8120",
+            "urlMaterial": "http://objetos.unam.mx/quimica/cuantoSabesTablaPeriodica/index.html",
+            "ubication": "RUA"
+        },
+        {
+            "id": 19,
+            "title": "Balanceo por tanteo (parte 1)",
+            "descripcion": "En el video se muestra paso a paso la mejor técnica para dar con los coeficientes correctos en cada compuesto químico.",
+            "type": "Video",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/85607",
+            "urlMaterial": "https://youtu.be/JNOJxkjMaMI?si=pmSbBH89_LOUpanq",
+            "ubication": "RUA"
+        },
+        {
+            "id": 20,
+            "title": "Balanceo por inspección",
+            "descripcion": "Interactivo que expone modelos operativos que representan las reacciones de descomposición (análisis) y síntesis del agua y ejemplos sobre la ley de la conservación de la materia y el balanceo de ecuaciones químicas.",
+            "type": "WEB",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/9604",
+            "urlMaterial": "http://www.objetos.unam.mx/quimica/balanceoEcuaciones/index.html",
+            "ubication": "RUA"
+        },
+        {
+            "id": 21,
+            "title": "Modelos atómicos",
+            "descripcion": "Lección interactiva en la que se muestra cómo el descubrimiento de las partículas subatómicas dio origen a los diferentes modelos atómicos hasta el modelo de Bohr.",
+            "type": "WEB",
+            "url": "https://portalacademico.cch.unam.mx/alumno/quimica1/u2/modelos_atomicos/modelosatomicos",
+            "urlMaterial": "https://portalacademico.cch.unam.mx/alumno/quimica1/u2/modelos_atomicos/modelosatomicos",
+            "ubication": "CCH"
+        },
+        {
+            "id": 22,
+            "title": "Química 1",
+            "descripcion": "Lección interactiva que ayuda a comprender fenómenos y procesos de la naturaleza que ocurren en su entorno y las relaciones con la ciencia química.",
+            "type": "WEB",
+            "url": "https://portalacademico.cch.unam.mx/alumno/quimica1",
+            "urlMaterial": "https://portalacademico.cch.unam.mx/alumno/quimica1",
+            "ubication": "CCH"
+        },
+        {
+            "id": 23,
+            "title": "Agua: compuesto o elemento",
+            "descripcion": "Lección interactiva en la que se muestran las reacciones de análisis y de síntesis del agua mediante la elaboración de modelos operativos representativos del agua, oxígeno e hidrógeno. También ayuda a comprender los conceptos de elemento, compuesto, átomo, molécula, enlace, mezcla y reacción química.",
+            "type": "WEB",
+            "url": "https://portalacademico.cch.unam.mx/alumno/quimica1/unidad1/agua-compuesto-o-elemento",
+            "urlMaterial": "https://portalacademico.cch.unam.mx/alumno/quimica1/unidad1/agua-compuesto-o-elemento",
+            "ubication": "CCH"
+        },
+        {
+            "id": 24,
+            "title": "Combustión",
+            "descripcion": "Material que muestra las propiedades de los compuestos orgánicos e inorgánicos para distinguirlos entre sí y diferenciar las reacciones endotérmicas y exotérmicas, para comprender sus aplicaciones en la generación de energía.",
+            "type": "WEB",
+            "url": "https://portalacademico.cch.unam.mx/alumno/quimica1/unidad2/combustion",
+            "urlMaterial": "https://portalacademico.cch.unam.mx/alumno/quimica1/unidad2/combustion",
+            "ubication": "CCH"
+        },
+        {
+            "id": 25,
+            "title": "Reacciones químicas",
+            "descripcion": "Material que muestra las diferencias entre un cambio físico y un cambio químico con base en la identificación y diferenciación entre los elementos y los compuestos, reconociendo las reacciones químicas endotérmicas y exotérmicas como procesos en donde se transforman unas sustancias en otras.",
+            "type": "WEB",
+            "url": "https://portalacademico.cch.unam.mx/alumno/quimica1/unidad1/reaccionesQuimicas",
+            "urlMaterial": "https://portalacademico.cch.unam.mx/alumno/quimica1/unidad1/reaccionesQuimicas",
+            "ubication": "CCH"
+        },
+        {
+            "id": 26,
+            "title": "Tipos de enlace",
+            "descripcion": "Lección interactiva que ayuda a identificar qué tipo de enlace químico se forma a través del estudio de las electronegatividades de los elementos involucrados en cada compuesto.",
+            "type": "WEB",
+            "url": "https://portalacademico.cch.unam.mx/alumno/quimica1/unidad2/tiposdeenlaces",
+            "urlMaterial": "https://portalacademico.cch.unam.mx/alumno/quimica1/unidad2/tiposdeenlaces",
+            "ubication": "CCH"
+        },
+        {
+            "id": 27,
+            "title": "Oxígeno sobre elementos",
+            "descripcion": "Lección interactiva en la que se conocerá cómo interactúa el oxígeno ante los metales y no metales para la formación de hidróxidos y ácidos.",
+            "type": "WEB",
+            "url": "https://portalacademico.cch.unam.mx/alumno/quimica1/u2/oxigeno_elementos",
+            "urlMaterial": "https://portalacademico.cch.unam.mx/alumno/quimica1/u2/oxigeno_elementos",
+            "ubication": "CCH"
+        }
+    ],
     "2": [
         {
             "id": 1,
@@ -235,7 +482,72 @@ const materialsByAulas: Record<string, Material[]> = {
         }
     ],
     4: [],
-    5: [],
+    5: [
+        {
+            "id": 1,
+            "title": "Una mirada al feminicidio",
+            "descripcion": "Reseña que presenta una reflexión sobre la intervención de los medios de comunicación y su contribución a la expansión de violencia feminicida en México.",
+            "citaApa": "Angulo Menasse, A. (2018). Una mirada al feminicidio, Mariana Berlanga. Editorial Ítaca, Universidad Autónoma de la Ciudad de México. 256 p. Investigaciones Feministas, 9(2), 345-346. https://doi.org/10.5209/INFE.60651",
+            "type": "web",
+            "url": "https://revistas.ucm.es/index.php/INFE/article/view/60651",
+            "urlMaterial": "https://revistas.ucm.es/index.php/INFE/article/view/60651",
+            "ubication": "Referencias"
+        },
+        {
+            "id": 2,
+            "title": "Avances sociales sustentables: la igualdad de género",
+            "descripcion": "El artículo afirma que las modificaciones especiales a la experiencia vital humana que han tenido lugar en las generaciones más recientes (disponibilidad de energía, alimentación, movilidad, esperanza de vida, etcétera) han estado acompañadas de adecuaciones inaplazables a inequidades históricas.",
+            "type": "PDF",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/5376",
+            "urlMaterial": "https://www.revista.unam.mx/vol.14/num10/art39/",
+            "ubication": "RUA"
+        },
+        {
+            "id": 3,
+            "title": "La agenda política y sociocultural para la equidad de género",
+            "descripcion": "Video que explica las acciones emprendidas en materia de equidad de género en el ámbito universitario y reflexiona sobre las acciones que falta reforzar para poner en la agenda pública estrategias que posibiliten la igualdad de género.",
+            "type": "Video",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/5756",
+            "urlMaterial": "https://mediacampus.cuaed.unam.mx/node/4354",
+            "ubication": "RUA"
+        },
+        {
+            "id": 4,
+            "title": "La evolución del acceso a la educación por géneros en México",
+            "descripcion": "En el artículo se analiza, desde la perspectiva de género, el estado que guarda la educación en México, y si existe igualdad de oportunidades educativas entre géneros y condición de pobreza.",
+            "type": "PDF",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/5717",
+            "urlMaterial": "https://www.revista.unam.mx/vol.9/num12/art101/art101.pdf",
+            "ubication": "RUA"
+        },
+        {
+            "id": 5,
+            "title": "¿Cómo entendemos la equidad de género?",
+            "descripcion": "Video que tiene como objetivo analizar el concepto de género entendido como una categoría social, pero también como una estructura de poder, en donde existe una subordinación y desvalorización de la mujer.",
+            "type": "Video",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/5720",
+            "urlMaterial": "https://mediacampus.cuaed.unam.mx/node/4302",
+            "ubication": "RUA"
+        },
+        {
+            "id": 6,
+            "title": "Ley General para la Igualdad entre Mujeres y Hombres",
+            "descripcion": "Sitio web de la Cámara de Diputados, en el que se encuentra la Ley General para la Igualdad entre Mujeres y Hombres, con sus decretos de reforma desde su publicación a la fecha.",
+            "type": "WEB",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/16693",
+            "urlMaterial": "https://www.diputados.gob.mx/LeyesBiblio/ref/lgimh.htm",
+            "ubication": "RUA"
+        },
+        {
+            "id": 7,
+            "title": "Guía de estudio para el examen extraordinario de la asignatura igualdad de género",
+            "descripcion": "La guía contiene la presentación de cada unidad del programa académico, actividades de aprendizaje, formas de autoevaluación, un examen modelo y bibliografía.",
+            "type": "PDF",
+            "url": "https://portalacademico.cch.unam.mx/recursos-de-apoyo/guia-para-examen-extraordinario/igualdad-genero",
+            "urlMaterial": "https://portalacademico.cch.unam.mx/sites/default/files/2025-02/guia-extraordinario-igualdad-genero.pdf",
+            "ubication": "CCH"
+        }
+    ],
     6: [],
     7: [],
     8: [
@@ -291,7 +603,7 @@ const materialsByAulas: Record<string, Material[]> = {
         {
             "id": 6,
             "title": "El potencial del software libre en la gestión de información en bibliotecas",
-            "descripcion": "Artículo expone los fundamentos éticos y tecnológicos que dieron origen al movimiento del software libre, así como la relación que este movimiento guarda con el mundo de las bibliotecas y el manejo de información digital. A su vez presenta algunas de las aplicaciones más populares de software libre que existen para la gestión de información en bibliotecas, a fin de mostrar los alcances y posibilidades que dichas aplicaciones tienen en la creación de sistemas de información a bajo costo, acordes con el ideal de un ciberespacio público.",
+            "descripcion": "Artículo que expone los fundamentos éticos y tecnológicos que dieron origen al movimiento del software libre, así como la relación que este movimiento guarda con el mundo de las bibliotecas y el manejo de información digital.",
             "url": "https://rua.unam.mx/portal/recursos/ficha/8291",
             "urlMaterial": "https://www.paginaspersonales.unam.mx/files/630/Publica_20130111215056.pdf",
             "ubication": "RUA",
@@ -300,7 +612,7 @@ const materialsByAulas: Record<string, Material[]> = {
         {
             "id": 7,
             "title": "Paquete Didáctico para Taller de Cómputo",
-            "descripcion": "El material que se presenta es un auxiliar en la enseñanza del Taller de cómputo ya que permite que los alumnos trabajen con los materiales seleccionados por el profesor de manera individual, y el trabajo del profesor se centre en corregir y explicar las dudas de concepto o manejo que se presenten en clase, además permite que los alumnos aprendan de acuerdo a su propio ritmo, y que los alumnos más avanzados desarrollen otras secuencias del paquete.",
+            "descripcion": "El material que se presenta es un auxiliar en la enseñanza del Taller de cómputo ya que permite que los alumnos trabajen con los materiales seleccionados por el profesor de manera individual.",
             "url": "https://portalacademico.cch.unam.mx/recursos-de-apoyo/matematicas/paquete-didactico-para-taller-de-computo",
             "urlMaterial": "https://portalacademico.cch.unam.mx/recursos-de-apoyo/matematicas/paquete-didactico-para-taller-de-computo",
             "ubication": "CCH",

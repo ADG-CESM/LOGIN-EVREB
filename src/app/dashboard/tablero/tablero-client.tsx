@@ -429,7 +429,7 @@ const materialsByAulas: Record<string, Material[]> = {
         {
             "id": 2,
             "title": "Investigación documental y bibliográfica",
-            "descripcion": "González, A. (1995). El poema como forma literaria. IIFL/UNAM.",
+            "descripcion": "Video que explica cuál es el propósito de la investigación documental y de la investigación bibliográfica, en qué áreas de estudio intervienen, qué tipo de archivos, documentos o materiales manejan.",
             "url": "https://rua.unam.mx/portal/recursos/ficha/71917",
             "urlMaterial": "https://youtu.be/M7bnWLBARU4?si=7kpBTkSMjUKmyZDD",
             "ubication": "RUA",
@@ -438,7 +438,7 @@ const materialsByAulas: Record<string, Material[]> = {
         {
             "id": 3,
             "title": "La investigación documental y sus herramientas de trabajo",
-            "descripcion": "Estudio sobre los recursos poéticos más utilizados en la poesía en lengua española.",
+            "descripcion": "Lección en la que se abordan diversos temas que hacen referencia a los pasos a seguir para llevar a cabo una investigación.",
             "url": "https://rua.unam.mx/portal/recursos/ficha/76917",
             "urlMaterial": "https://www.uv.mx/apps/bdh/investigacion/unidad2/index-2.html",
             "ubication": "RUA",
@@ -447,16 +447,16 @@ const materialsByAulas: Record<string, Material[]> = {
         {
             "id": 4,
             "title": "Guía del proceso de investigación documental",
-            "descripcion": "Curso sobre la métrica en la poesía española, incluyendo ejercicios y ejemplos prácticos.",
+            "descripcion": "Esta guía elaborada por el Dr. Juan Luis Francois Lacoutre te ayudará en tu proceso de investigación documental a: elegir el tema de investigación, delimitar el tema, plantear el problema así como llevar el control de tus fuentes de información.",
             "url": "https://rua.unam.mx/portal/recursos/ficha/6181",
-            "urlMaterial": "nan",
+            "urlMaterial": "http://profesores.fi-b.unam.mx/jlfl/Seminario_IEE/Guia_Inv_Documental.pdf",
             "ubication": "RUA",
             "type": "PDF"
         },
         {
             "id": 5,
             "title": "Técnicas de investigación",
-            "descripcion": "Estudio detallado sobre el soneto, una de las formas poéticas más importantes de la literatura española.",
+            "descripcion": "Este documento describe las técnicas de la investigación documental y de campo con el propósito de auxiliar al alumno en su investigación. Este material fue desarrollado para el Seminario de Ingeniería Eléctrica Electrónica por la Facultad de Ingeniería de la UNAM.",
             "url": "https://rua.unam.mx/portal/recursos/ficha/6177",
             "urlMaterial": "http://profesores.fi-b.unam.mx/jlfl/Seminario_IEE/tecnicas.pdf",
             "ubication": "RUA",
@@ -465,7 +465,7 @@ const materialsByAulas: Record<string, Material[]> = {
         {
             "id": 6,
             "title": "TLRIID 1",
-            "descripcion": "Análisis de la lírica popular en España y su influencia en la poesía culta.",
+            "descripcion": "Los Objetos de Aprendizaje para desarrollar la competencia comunicativa en torno a la lectura, la escritura, la escucha, el habla, la investigación y la literatura",
             "url": "https://portalacademico.cch.unam.mx/alumno/tlriid1",
             "urlMaterial": "https://portalacademico.cch.unam.mx/alumno/tlriid1",
             "ubication": "CCH",
@@ -474,14 +474,69 @@ const materialsByAulas: Record<string, Material[]> = {
         {
             "id": 7,
             "title": "TLRIID 2",
-            "descripcion": "Los Objetos de Aprendizaje para desarrollar la competencia comunicativa en torno a la lectura, la escritura, el escucha, el habla, la investigación y la literatura.",
+            "descripcion": "Los Objetos de Aprendizaje para desarrollar la competencia comunicativa en torno a la lectura, la escritura, la escucha, el habla, la investigación y la literatura",
             "url": "https://portalacademico.cch.unam.mx/alumno/tlriid2",
             "urlMaterial": "https://portalacademico.cch.unam.mx/alumno/tlriid2",
             "ubication": "CCH",
             "type": "web"
         }
     ],
-    4: [],
+    4: [
+        {
+            "id": 1,
+            "title": "Transición a la sociedad capitalista: las revoluciones burguesas (siglo XVI a principios del XIX)",
+            "descripcion": "Video que describe los temas de la unidad 3 de Historia Universal Moderna y Contemporánea I. ",
+            "type": "Video",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/2661",
+            "urlMaterial": "https://www.youtube.com/watch?v=14VF5cfq5cY",
+            "ubication": "RUA"
+        },
+        {
+            "id": 2,
+            "title": "Historia Universal Moderna y Contemporánea 1",
+            "descripcion": "Lección para reflexionar, problematizar y analizar los procesos sociales, económicos, políticos y culturales de la humanidad en su desarrollo histórico.",
+            "type": "WEB",
+            "url": "https://portalacademico.cch.unam.mx/alumno/historiauniversal1",
+            "urlMaterial": "https://portalacademico.cch.unam.mx/alumno/historiauniversal1",
+            "ubication": "CCH"
+        },
+        {
+            "id": 3,
+            "title": "Unidad I: Introducción al estudio de la Historia",
+            "descripcion": "Sitio web con resúmenes, materiales y ejercicios de autoevaluación. ",
+            "type": "WEB",
+            "url": "https://portalacademico.cch.unam.mx/repositorio-de-sitios/historico-social/historia-universal-1/HUMCI/HUI-1.htm",
+            "urlMaterial": "https://portalacademico.cch.unam.mx/repositorio-de-sitios/historico-social/historia-universal-1/HUMCI/HUI-1.htm",
+            "ubication": "CCH"
+        },
+        {
+            "id": 4,
+            "title": "Unidad II: El Feudalismo",
+            "descripcion": "Sitio web con resúmenes, videos y ejercicios de autoevaluación. ",
+            "type": "WEB",
+            "url": "https://portalacademico.cch.unam.mx/repositorio-de-sitios/historico-social/historia-universal-1/HUMCI/HUI-2.htm",
+            "urlMaterial": "https://portalacademico.cch.unam.mx/repositorio-de-sitios/historico-social/historia-universal-1/HUMCI/HUI-2.htm",
+            "ubication": "CCH"
+        },
+        {
+            "id": 5,
+            "title": "Unidad III: Transición a la sociedad capitalista",
+            "descripcion": "Sitio web con resúmenes, videos y ejercicios de autoevaluación. ",
+            "type": "WEB",
+            "url": "https://portalacademico.cch.unam.mx/repositorio-de-sitios/historico-social/historia-universal-1/HUMCI/HUI-3.htm",
+            "urlMaterial": "https://portalacademico.cch.unam.mx/repositorio-de-sitios/historico-social/historia-universal-1/HUMCI/HUI-3.htm",
+            "ubication": "CCH"
+        },
+        {
+            "id": 6,
+            "title": "Unidad IV: Auge del capitalismo de libre competencia y presencia del movimiento obrero",
+            "descripcion": "Sitio web con resúmenes, videos y ejercicios de autoevaluación. ",
+            "type": "WEB",
+            "url": "https://portalacademico.cch.unam.mx/repositorio-de-sitios/historico-social/historia-universal-1/HUMCI/HUI-4.htm",
+            "urlMaterial": "https://portalacademico.cch.unam.mx/repositorio-de-sitios/historico-social/historia-universal-1/HUMCI/HUI-4.htm",
+            "ubication": "CCH"
+        }
+    ],
     5: [
         {
             "id": 1,
@@ -549,7 +604,468 @@ const materialsByAulas: Record<string, Material[]> = {
         }
     ],
     6: [],
-    7: [],
+    7: [
+        {
+            "id": 1,
+            "title": "Guía de estudio para el examen extraordinario de inglés I: CCH",
+            "descripcion": "Guía diseñada para adquierir los conocimientos y habilidades necesarias para acreditar el examen extraordinario correspondiente al semestre I del programa de inglés de cuatro habilidades del Colegio de Ciencias y Humanidades.",
+            "type": "PDF",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/5627",
+            "urlMaterial": "https://www.cchazc.unam.mx/wp-content/uploads/2013/03/GuiaIngles.pdf",
+            "ubication": "RUA"
+        },
+        {
+            "id": 2,
+            "title": "Inglés: vocabulario de la familia y los amigos (relaciones personales)",
+            "descripcion": "Video que presenta el vocabulario relacionado con la familia en inglés.",
+            "type": "Video",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/20875",
+            "urlMaterial": "https://www.youtube.com/watch?v=wdPdBOfoJ1w",
+            "ubication": "RUA"
+        },
+        {
+            "id": 3,
+            "title": "Aprender inglés: la casa y las direcciones",
+            "descripcion": "Video donde se muestra el uso del verbo \"to be\" para describir la ubicación de muebles, cuartos y demás cosas en un sitio en particular.",
+            "type": "Video",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/17121",
+            "urlMaterial": "https://www.youtube.com/watch?v=PTgqVS4KyrU",
+            "ubication": "RUA"
+        },
+        {
+            "id": 4,
+            "title": "Vocabulario inglés: partes de la ciudad (parts of the city)",
+            "descripcion": "Video en el que encontramos un vocabulario en inglés con distintas partes de una ciudad, además de la pronunciación de cada una de las palabras.",
+            "type": "Video",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/17812",
+            "urlMaterial": "https://www.youtube.com/watch?v=m78swhrdKcg",
+            "ubication": "RUA"
+        },
+        {
+            "id": 5,
+            "title": "Aprende inglés: las prendas de ropa y accesorios",
+            "descripcion": "Video que contiene vocabulario en inglés de las prendas de ropa y accesorios.",
+            "type": "Video",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/20866",
+            "urlMaterial": "https://www.youtube.com/watch?v=CdLW5t_akl8",
+            "ubication": "RUA"
+        },
+        {
+            "id": 6,
+            "title": "Vocabulario inglés: esparcimiento y pasatiempos (recreation & hobbies)",
+            "descripcion": "Video que contiene vocabulario en inglés de \"hobbies\" y pasatiempos.",
+            "type": "Video",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/20888",
+            "urlMaterial": "https://www.youtube.com/watch?v=UrGjGXfqJyA",
+            "ubication": "RUA"
+        },
+        {
+            "id": 7,
+            "title": "Gandhi Katha [inglés]",
+            "descripcion": "Podcast que reproduce la versión original (en inglés) del curso \"Gandhi Katha\", donde Narayan Desai va tejiendo recuerdos y enseñanzas que describen la historia de vida de Bapu, como le llamaba la gente a Gandhi, junto con piezas musicales que hablan de valores como la paz y el amor.",
+            "type": "Podcast",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/15304",
+            "urlMaterial": "https://descargacultura.unam.mx/3507808?sharedItem=3507808",
+            "ubication": "RUA"
+        },
+        {
+            "id": 8,
+            "title": "Cognados (español/inglés)",
+            "descripcion": "Video que enseña el concepto de cognados mediante ejemplos y la historia de cómo se crearon.",
+            "type": "Video",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/16953",
+            "urlMaterial": "https://www.youtube.com/watch?v=8Ne0oOiwXYk",
+            "ubication": "RUA"
+        },
+        {
+            "id": 9,
+            "title": "Vocabulario en inglés: verbos y adjetivos para describir la apariencia física",
+            "descripcion": "Video que explica cómo utilizar los verbos y adjetivos en inglés para describir la apariencia física de una persona.",
+            "type": "Video",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/16970",
+            "urlMaterial": "https://www.youtube.com/watch?v=LvYHoaxH0v0",
+            "ubication": "RUA"
+        },
+        {
+            "id": 10,
+            "title": "El imperativo en inglés con explicación y ejemplos",
+            "descripcion": "Video de una lección sobre el uso del imperativo en inglés, la cual es explicada mediante ejemplos que muestran su escritura y pronunciación.",
+            "type": "Video",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/16979",
+            "urlMaterial": "https://www.youtube.com/watch?v=mxxTylnpzNA",
+            "ubication": "RUA"
+        },
+        {
+            "id": 11,
+            "title": "Conversaciones en inglés: gustos y preferencias",
+            "descripcion": "Video que muestra varios ejemplos de frases utilizadas para demostrar gustos y preferencias en una conversación en inglés.",
+            "type": "Video",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/16986",
+            "urlMaterial": "https://www.youtube.com/watch?v=DZMAtPNSsRs",
+            "ubication": "RUA"
+        },
+        {
+            "id": 12,
+            "title": "Profesiones en inglés",
+            "descripcion": "Audio de una lección de un curso básico sobre las profesiones en inglés.",
+            "type": "Podcast",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/16990",
+            "urlMaterial": "https://archive.org/details/DawayPodcastBasico006",
+            "ubication": "RUA"
+        },
+        {
+            "id": 13,
+            "title": "La frase nominal del inglés",
+            "descripcion": "Texto que presenta la descripción de la frase nominal en el idioma inglés, desde el punto de vista léxico-gramatical. Además incluye un video que explica detalladamente estas características.",
+            "type": "WEB",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/18873",
+            "urlMaterial": "https://oercommons.org/authoring/4257-la-frase-nominal-del-ingl%C3%A9s/view",
+            "ubication": "RUA"
+        },
+        {
+            "id": 14,
+            "title": "Preposiciones de lugar en inglés y ejemplos",
+            "descripcion": "Blog que explica el uso del verbo de las preposiciones de lugar en inglés. Contiene ejemplos para reforzar el aprendizaje.",
+            "type": "WEB",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/20689",
+            "urlMaterial": "https://blogpara-aprenderingles.blogspot.com/2012/08/preposiciones-de-lugar-en-ingles-y.html",
+            "ubication": "RUA"
+        },
+        {
+            "id": 15,
+            "title": "Estados de ánimo en inglés",
+            "descripcion": "Blog que contiene videos con los cuales se explica vocabulario útil para expresar los estados de ánimo de las personas. Anexa una lista de las emociones más comunes.",
+            "type": "WEB",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/20702",
+            "urlMaterial": "https://vocabulariodeingles.blogspot.com/2011/05/vocabulario-emociones-emotions.html",
+            "ubication": "RUA"
+        },
+        {
+            "id": 16,
+            "title": "Frases nominales en inglés",
+            "descripcion": "Blog que explica los elementos y formas de las frases nominales en inglés. Contiene ejemplos para reforzar el aprendizaje.",
+            "type": "WEB",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/20715",
+            "urlMaterial": "https://pnfcc.blogspot.com/2014/07/frasesv-nominales-en-ingles.html",
+            "ubication": "RUA"
+        },
+        {
+            "id": 17,
+            "title": "Vocabulario en inglés: adjetivos para describir la personalidad",
+            "descripcion": "Video que presenta algunos de los adjetivos más utilizados para describir la personalidad de alguien, así como algunos sufijos (dis-, im-, in-, ir-, un-) para formar adjetivos que expresan cualidades negativas.",
+            "type": "Video",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/20861",
+            "urlMaterial": "https://www.youtube.com/watch?v=1_SvNekOIG8",
+            "ubication": "RUA"
+        },
+        {
+            "id": 18,
+            "title": "El alfabeto en inglés",
+            "descripcion": "Video que repasa el nombre de las letras en inglés, junto con el sonido que corresponde a cada letra.",
+            "type": "Video",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/20862",
+            "urlMaterial": "https://www.youtube.com/watch?v=3oOmMqsPbC0",
+            "ubication": "RUA"
+        },
+        {
+            "id": 19,
+            "title": "El alfabeto: abecedario en inglés",
+            "descripcion": "Video del abecedario en inglés con la pronunciación de cada letra.",
+            "type": "Video",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/20892",
+            "urlMaterial": "https://www.youtube.com/watch?v=-zeC0xRB8kk",
+            "ubication": "RUA"
+        },
+        {
+            "id": 20,
+            "title": "Aprende en inglés las partes del cuerpo",
+            "descripcion": "Video que contiene vocabulario en inglés de las partes del cuerpo. Ayuda para aprender y repasar la pronunciación.",
+            "type": "Video",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/20868",
+            "urlMaterial": "https://www.youtube.com/watch?v=iwhmRExBWig",
+            "ubication": "RUA"
+        },
+        {
+            "id": 21,
+            "title": "El plural en inglés: sustantivos",
+            "descripcion": "Video que explica el plural de los sustantivos en inglés. Contiene ejemplos para formar los plurales.",
+            "type": "Video",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/20873",
+            "urlMaterial": "https://www.youtube.com/watch?v=slcuFaRoa3s",
+            "ubication": "RUA"
+        },
+        {
+            "id": 22,
+            "title": "Vocabulario y expresiones en inglés para hablar de nuestros hobbies y aficiones",
+            "descripcion": "Video que muestra vocabulario relacionado con los hobbies y las aficiones. También explica algunas de las expresiones y estructuras más comunes para hablar de lo que nos gusta hacer en nuestro tiempo libre.",
+            "type": "Video",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/20881",
+            "urlMaterial": "https://www.youtube.com/watch?v=DYtqymt-dDg",
+            "ubication": "RUA"
+        },
+        {
+            "id": 23,
+            "title": "El artículo indefinido en inglés \"a\", \"an\" (un, una, unos, unas)",
+            "descripcion": "Video que explica cómo usar el artículo indefinido o indeterminado en inglés \"a\", \"an\" (un, una, unos, unas).",
+            "type": "Video",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/20882",
+            "urlMaterial": "https://www.youtube.com/watch?v=hg9FcAz7-ag",
+            "ubication": "RUA"
+        },
+        {
+            "id": 24,
+            "title": "Aprende en inglés los miembros de la familia",
+            "descripcion": "Video que expone el vocabulario de la familia en inglés.",
+            "type": "Video",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/20884",
+            "urlMaterial": "https://www.youtube.com/watch?v=MN38RS5f3Cg",
+            "ubication": "RUA"
+        },
+        {
+            "id": 25,
+            "title": "Cómo presentarse en inglés: presentaciones",
+            "descripcion": "Video que explica cómo presentarte y a presentar a los amigos y conocidos. Contiene ejemplos en diferentes situaciones.",
+            "type": "Video",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/20885",
+            "urlMaterial": "https://www.youtube.com/watch?v=njAo96hVrZ4",
+            "ubication": "RUA"
+        },
+        {
+            "id": 26,
+            "title": "There is/there are: describir lugares en inglés",
+            "descripcion": "Video que muestra cómo usar las expresiones \"there is\" y \"there are\" para mencionar las cosas que hay en lugares como la casa, habitación u oficina.",
+            "type": "Video",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/17119",
+            "urlMaterial": "https://www.youtube.com/watch?v=yZzU87S-IJ8",
+            "ubication": "RUA"
+        },
+        {
+            "id": 27,
+            "title": "6 frases para aceptar invitación en inglés",
+            "descripcion": "Blog que muestra seis frases para aceptar una invitación en inglés. Contiene ejemplos para saber utilizar las frases.",
+            "type": "WEB",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/20691",
+            "urlMaterial": "https://blogpara-aprenderingles.blogspot.com/2015/06/6-frases-para-aceptar-invitacion-en.html",
+            "ubication": "RUA"
+        },
+        {
+            "id": 28,
+            "title": "Preguntas de información personal en inglés",
+            "descripcion": "Blog que explica las preguntas de información personal en inglés utilizadas en diferentes contextos.",
+            "type": "WEB",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/20701",
+            "urlMaterial": "https://tuinglesya.blogspot.com/2015/03/preguntas-de-informacion-personal-en.html",
+            "ubication": "RUA"
+        },
+        {
+            "id": 29,
+            "title": "Miembros de la familia en inglés",
+            "descripcion": "Video que presenta el vocabulario de los miembros de la familia en inglés.",
+            "type": "Video",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/20864",
+            "urlMaterial": "https://www.youtube.com/watch?v=9O9uWq0Ppc8",
+            "ubication": "RUA"
+        },
+        {
+            "id": 30,
+            "title": "Cómo describir a una persona en inglés: verbos, adverbios y expresiones más comunes",
+            "descripcion": "Video que explica cómo utilizar los verbos, los adverbios y las expresiones más comunes para describir a una persona en inglés.",
+            "type": "Video",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/20871",
+            "urlMaterial": "https://www.youtube.com/watch?v=pfJ3TLg0g48",
+            "ubication": "RUA"
+        },
+        {
+            "id": 31,
+            "title": "Los sustantivos singulares y plurales en inglés",
+            "descripcion": "Video que explica los sustantivos singulares y plurales en inglés. Contiene ejemplos para reforzar el aprendizaje.",
+            "type": "Video",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/20876",
+            "urlMaterial": "https://www.youtube.com/watch?v=wfdCG9QvVp8",
+            "ubication": "RUA"
+        },
+        {
+            "id": 32,
+            "title": "Saludarse, despedirse y presentarse en inglés",
+            "descripcion": "Sitio web que presenta frases utilizadas para saludar y despedirse, para responder a un saludo, presentar a dos personas y entablar una pequeña conversación.",
+            "type": "WEB",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/16989",
+            "urlMaterial": "https://linguing.es/viajes-de-idiomas/saludarse-despedirse-y-presentarse-en-ingles/",
+            "ubication": "RUA"
+        },
+        {
+            "id": 33,
+            "title": "Los adjetivos posesivos, los pronombres posesivos y el caso posesivo en inglés",
+            "descripcion": "Video que explica cómo usar los adjetivos posesivos, los pronombres posesivos y el caso posesivo (caso genitivo o genitivo sajón) en inglés.",
+            "type": "Video",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/20869",
+            "urlMaterial": "https://www.youtube.com/watch?v=jM-ecOKWjsA",
+            "ubication": "RUA"
+        },
+        {
+            "id": 34,
+            "title": "Listen and learn: relaciones familiares (family relationships)",
+            "descripcion": "Interactivo diseñado para reconocer las diferentes relaciones entre familiares; hablar de sus ocupaciones y de sus posesiones; y describir su apariencia física y personalidad, así como la de otras personas.",
+            "type": "WEB",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/14156",
+            "urlMaterial": "http://objetos.unam.mx/ingles/listenLearnUnit2/index.html",
+            "ubication": "RUA"
+        },
+        {
+            "id": 35,
+            "title": "La casa y el mobiliario",
+            "descripcion": "Ejercicios de vocabulario interactivos en inglés y español sobre partes de la casa, habitaciones, utensilios y mobiliario.",
+            "type": "WEB",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/18863",
+            "urlMaterial": "https://www.aprenderespanol.org/vocabulario/casa-mobiliario.html",
+            "ubication": "RUA"
+        },
+        {
+            "id": 36,
+            "title": "Posesivo anglosajón",
+            "descripcion": "Blog que explica el posesivo anglosajón en inglés. Contiene ejercicios para reforzar el conocimiento.",
+            "type": "WEB",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/20680",
+            "urlMaterial": "https://unefainglesiiijfd.blogspot.com/2011/04/posesivo-anglosajon.html",
+            "ubication": "RUA"
+        },
+        {
+            "id": 37,
+            "title": "Adjetivos calificativos: tamaños y medidas",
+            "descripcion": "Blog que muestra los adjetivos calificativos en inglés de tamaños y medidas. Contiene ejemplos.",
+            "type": "WEB",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/20688",
+            "urlMaterial": "https://blogpara-aprenderingles.blogspot.com/2012/08/adjetivos-calificativos-tamanos-y.html",
+            "ubication": "RUA"
+        },
+        {
+            "id": 38,
+            "title": "Vocabulario: physical appearance",
+            "descripcion": "Video que presenta vocabulario en inglés relacionado con la apariencia física.",
+            "type": "Video",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/20867",
+            "urlMaterial": "https://www.youtube.com/watch?v=G5QgqZvili0",
+            "ubication": "RUA"
+        },
+        {
+            "id": 39,
+            "title": "La familia",
+            "descripcion": "Video que presenta vocabulario en inglés acerca de los miembros de la familia. Contiene audio para reforzar el aprendizaje.",
+            "type": "Video",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/20874",
+            "urlMaterial": "https://www.youtube.com/watch?v=VBpvWIe4BNM",
+            "ubication": "RUA"
+        },
+        {
+            "id": 40,
+            "title": "Personal titles (títulos personales)",
+            "descripcion": "Video que presenta vocabulario en inglés acerca de los títulos personales.",
+            "type": "Video",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/20883",
+            "urlMaterial": "https://www.youtube.com/watch?v=hZDdtoKlxvI&t=4s",
+            "ubication": "RUA"
+        },
+        {
+            "id": 41,
+            "title": "The genitive (el genitivo sajón)",
+            "descripcion": "Blog que explica el genitivo sajón en el idioma inglés. Contiene ejemplos y ejercicios para reforzar el aprendizaje.",
+            "type": "WEB",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/20697",
+            "urlMaterial": "https://elblogdelingles.blogspot.com/2007/02/lesson-36-genitive-el-genitivo-sajn.html",
+            "ubication": "RUA"
+        },
+        {
+            "id": 42,
+            "title": "Question words in english",
+            "descripcion": "Blog que explica las palabras de preguntas en inglés. Contiene ejemplos para reforzar el aprendizaje.",
+            "type": "WEB",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/20705",
+            "urlMaterial": "https://www.grammar.cl/Notes/Question_Words.htm",
+            "ubication": "RUA"
+        },
+        {
+            "id": 43,
+            "title": "Artículo indeterminado: a, an",
+            "descripcion": "Sitio web que explica el artículo indeterminado en inglés.",
+            "type": "WEB",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/20823",
+            "urlMaterial": "https://www.aprenderinglesfacil.es/2008/03/artculo-indeterminado-an.html",
+            "ubication": "RUA"
+        },
+        {
+            "id": 44,
+            "title": "Gramática inglesa: ¿quién?, ¿por qué?",
+            "descripcion": "Sitio web que explica las diferencias entre \"who\" y \"whose\" en inglés. Contiene ejercicios.",
+            "type": "WEB",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/20829",
+            "urlMaterial": "https://www.languageguide.org/english/grammar/esp/part1/who.jsp",
+            "ubication": "RUA"
+        },
+        {
+            "id": 45,
+            "title": "Who, what, where, when, why, how",
+            "descripcion": "Video que explica las palabras para formular preguntas en inglés. Contiene ejemplos para facilitar el aprendizaje.",
+            "type": "Video",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/20877",
+            "urlMaterial": "https://www.youtube.com/watch?v=2lEErH_rNBQ",
+            "ubication": "RUA"
+        },
+        {
+            "id": 46,
+            "title": "Genitivo sajón",
+            "descripcion": "Video que explica con ejemplos el genitivo sajón en inglés.",
+            "type": "Video",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/20886",
+            "urlMaterial": "https://www.youtube.com/watch?v=SIuvbhqa9SA",
+            "ubication": "RUA"
+        },
+        {
+            "id": 47,
+            "title": "Describing things part 3",
+            "descripcion": "Video en el que se explica cómo usar adjetivos para describir cosas en inglés, con características como el tamaño y el material.",
+            "type": "Video",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/17808",
+            "urlMaterial": "https://www.youtube.com/watch?v=fT2VCpfafrg",
+            "ubication": "RUA"
+        },
+        {
+            "id": 48,
+            "title": "Pronombres y adjetivos: demostrativos",
+            "descripcion": "Video que explica qué son los pronombres y adjetivos demostrativos y cómo usarlos en inglés.",
+            "type": "Video",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/20879",
+            "urlMaterial": "https://www.youtube.com/watch?v=8jBE_GrlFKU",
+            "ubication": "RUA"
+        },
+        {
+            "id": 49,
+            "title": "Likes and dislikes",
+            "descripcion": "Video donde se muestra la estructura de las oraciones usadas para expresar gustos y disgustos, utilizando los verbos \"like\", \"love\" y \"hate\".",
+            "type": "Video",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/17199",
+            "urlMaterial": "https://www.youtube.com/watch?v=G5jSzCtEkhQ",
+            "ubication": "RUA"
+        },
+        {
+            "id": 50,
+            "title": "Likes & dislikes: expresar preferencias",
+            "descripcion": "Video donde se muestra la estructura de las oraciones para expresar gustos y disgustos, utilizando los verbos \"like\", \"love\" y \"hate\".",
+            "type": "Video",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/17200",
+            "urlMaterial": "https://www.youtube.com/watch?v=COWxgkNNVho",
+            "ubication": "RUA"
+        },
+        {
+            "id": 51,
+            "title": "Inglés 1",
+            "descripcion": "Lección orientada a la comprensión de textos sencillos, orales y escritos de un ámbito personal y académico en el idioma inglés.",
+            "type": "WEB",
+            "url": "https://portalacademico.cch.unam.mx/ingles1",
+            "urlMaterial": "https://portalacademico.cch.unam.mx/ingles1",
+            "ubication": "CCH"
+        }
+    ]
+    ,
     8: [
         {
             "id": 1,
@@ -620,7 +1136,37 @@ const materialsByAulas: Record<string, Material[]> = {
         },
 
     ],
-    9: [],
+    9: [
+        {
+            "id": 1,
+            "title": "Biología. La unidad y diversidad de la vida.",
+            "descripcion": "Libro para lectura en línea o descarga de las primeras 100 páginas, en formato PDF.",
+            "citaApa": "Starr, C. et al. (2018). Biología. La unidad y diversidad de la vida. Cengage Learning, 13a. ed. ProQuest Ebook Central. https://ebookcentral.proquest.com/lib/unam/detail.action?docID=5756580.",
+            "url": "https://ebookcentral.proquest.com/lib/unam/detail.action?docID=5756580",
+            "urlMaterial": "https://ebookcentral.proquest.com/lib/unam/detail.action?docID=5756580",
+            "ubication": "Referencias",
+            "type": "WEB"
+        },
+        {
+            "id": 2,
+            "title": "Departamento de Educación Física",
+            "descripcion": "Sitio web del Departamento de Educación Física del Colegio de Ciencias y Humanidades de la UNAM.",
+            "url": "https://rua.unam.mx/portal/recursos/ficha/19311",
+            "urlMaterial": "hhttps://www.cch.unam.mx/academica/?q=depef",
+            "ubication": "RUA",
+            "type": "WEB"
+        },
+        {
+            "id": 3,
+            "title": "Introducción a la educación física",
+            "descripcion": "Video que contiene conceptos relacionados con educación física.",
+            "url": "https://portalacademico.cch.unam.mx/recursos-de-apoyo/video-educativo/introduccion-la-educacion-fisica",
+            "urlMaterial": "https://www.youtube.com/watch?v=qxgKwAAvhp4",
+            "ubication": "CCH",
+            "type": "video"
+        },
+
+    ]
 };
 
 export default function TableroClient() {

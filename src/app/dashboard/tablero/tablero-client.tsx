@@ -659,7 +659,7 @@ const materialsByAulas: Record<string, Material[]> = {
             "urlMaterial": "https://www.youtube.com/watch?v=UrGjGXfqJyA",
             "ubication": "RUA"
         },
-        {
+        /*{
             "id": 7,
             "title": "Gandhi Katha [inglés]",
             "descripcion": "Podcast que reproduce la versión original (en inglés) del curso \"Gandhi Katha\", donde Narayan Desai va tejiendo recuerdos y enseñanzas que describen la historia de vida de Bapu, como le llamaba la gente a Gandhi, junto con piezas musicales que hablan de valores como la paz y el amor.",
@@ -667,7 +667,7 @@ const materialsByAulas: Record<string, Material[]> = {
             "url": "https://rua.unam.mx/portal/recursos/ficha/15304",
             "urlMaterial": "https://descargacultura.unam.mx/3507808?sharedItem=3507808",
             "ubication": "RUA"
-        },
+        },*/
         {
             "id": 8,
             "title": "Cognados (español/inglés)",
@@ -704,15 +704,15 @@ const materialsByAulas: Record<string, Material[]> = {
             "urlMaterial": "https://www.youtube.com/watch?v=DZMAtPNSsRs",
             "ubication": "RUA"
         },
-        {
-            "id": 12,
-            "title": "Profesiones en inglés",
-            "descripcion": "Audio de una lección de un curso básico sobre las profesiones en inglés.",
-            "type": "Podcast",
-            "url": "https://rua.unam.mx/portal/recursos/ficha/16990",
-            "urlMaterial": "https://archive.org/details/DawayPodcastBasico006",
-            "ubication": "RUA"
-        },
+        /* {
+             "id": 12,
+             "title": "Profesiones en inglés",
+             "descripcion": "Audio de una lección de un curso básico sobre las profesiones en inglés.",
+             "type": "Podcast",
+             "url": "https://rua.unam.mx/portal/recursos/ficha/16990",
+             "urlMaterial": "https://archive.org/details/DawayPodcastBasico006",
+             "ubication": "RUA"
+         },*/
         {
             "id": 13,
             "title": "La frase nominal del inglés",

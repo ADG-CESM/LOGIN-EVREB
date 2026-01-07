@@ -1,0 +1,4 @@
+username,password,nombre,apellido,plantel,semestre,rol
+usercsv1,pass1,Nom1,Ape1,CCH,2,alumno
+usercsv2,,Nom2,Ape2,P6,4,alumno
+usercsv3,pass3,Nom3,Ape3,CCH,6,admin

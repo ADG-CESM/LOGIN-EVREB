@@ -57,7 +57,7 @@ export default function RegisterCsvPage() {
                     console.log("Errores:", errors);
                 } else {
                     alert(`Todos los ${successes} usuarios registrados con éxito.`);
-                    router.push("/login?registered=1");
+                    router.push("/dashboard");
                 }
             } else {
                 alert(data.error || "Error en registro masivo");

@@ -1,23 +1,16 @@
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/auth";
-import { redirect } from "next/navigation";
-import LogoutButton from "./logout-btn";
+import Link from "next/link";
 
 export default async function DashboardPage() {
-    const session = await getServerSession(authOptions);
-    const user = session?.user;
-    if (!user) redirect("/login");
-
     return (
         <main style={{ padding: 24 }}>
-            <h1>Hola, {user.nombre} {user.apellido}</h1>
-            <ul>
-                <li>Usuario: {user.username}</li>
-                <li>Plantel: {user.plantel}</li>
-                <li>Semestre: {user.semestre}</li>
-                <li>Rol: {user.rol}</li>
-            </ul>
-            <LogoutButton />
+            <h1>Bienvenido al Dashboard</h1>
+            <p>El acceso ya no requiere iniciar sesión.</p>
+            <p>
+                Explora el <Link href="/dashboard/tablero" className="link">tablero</Link> para ver materiales.
+            </p>
+            <p>
+                Consulta los <Link href="/mas-visitados" className="link">más visitados</Link>.
+            </p>
         </main>
     );
 }

@@ -19,6 +19,7 @@ interface MateriaProps {
 }
 
 export function MateriaCard({
+    id,
     title,
     url,
     urlMaterial,
@@ -55,6 +56,7 @@ export function MateriaCard({
             <div className="absolute inset-0 z-20 opacity-0 pointer-events-none transition-opacity duration-200 block sm:hidden group-focus-within:opacity-100 group-focus-within:pointer-events-auto">
                 <div className="h-full">
                     <Descripcion
+                        materialId={id}
                         descripcion={descripcion ?? title}
                         url={url}
                         urlMaterial={urlMaterial}
@@ -73,6 +75,7 @@ export function MateriaCard({
             >
                 <div className="h-full">
                     <Descripcion
+                        materialId={id}
                         descripcion={descripcion ?? title}
                         url={url}
                         urlMaterial={urlMaterial}

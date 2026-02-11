@@ -1,6 +1,11 @@
-import NextAuth from "next-auth";
-import { authOptions } from "@/auth";
+import { NextResponse } from "next/server";
 
 export const runtime = "nodejs";
-const handler = NextAuth(authOptions);
-export { handler as GET, handler as POST };
+
+export async function GET() {
+	return NextResponse.json({ ok: false, error: "auth_removed" }, { status: 404 });
+}
+
+export async function POST() {
+	return NextResponse.json({ ok: false, error: "auth_removed" }, { status: 404 });
+}

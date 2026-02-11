@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 export interface DescripcionProps {
+    materialId?: string;
     title: string;
     descripcion: string;
     url: string;
@@ -10,7 +11,7 @@ export interface DescripcionProps {
     type?: string;
     citaApa?: string;
 }
-export function Descripcion({ title, descripcion, url, urlMaterial, ubication, type, citaApa }: DescripcionProps) {
+export function Descripcion({ materialId, title, descripcion, url, urlMaterial, ubication, type, citaApa }: DescripcionProps) {
     const audioRef = useRef<HTMLAudioElement | null>(null);
     const [isPlaying, setIsPlaying] = useState(false);
     const [showCitation, setShowCitation] = useState(false);
@@ -120,6 +121,34 @@ export function Descripcion({ title, descripcion, url, urlMaterial, ubication, t
                         target="_blank"
                         rel="noopener noreferrer"
                         className="bg-blue-600 text-white px-3 py-1.5 rounded-xl text-xs sm:text-sm shadow hover:bg-blue-700 active:scale-[0.99] transition-all"
+                        onClick={() => {
+                            // Evita sumar múltiples veces en poco tiempo para el mismo material
+                            const TRACK_TTL_MS = 5 * 60 * 1000; // 5 minutos
+                            try {
+                                const keyId = urlMaterial ? String(urlMaterial) : String(materialId);
+                                const storeKey = `metrics:view:${keyId}`;
+                                const now = Date.now();
+                                const last = Number(localStorage.getItem(storeKey) || 0);
+                                if (!isFinite(last) || now - last >= TRACK_TTL_MS) {
+                                    localStorage.setItem(storeKey, String(now));
+                                    const payload = { materialId, title, urlMaterial, ubication, type };
+                                    const url = "/evreb/api/metrics/view";
+                                    if (navigator.sendBeacon) {
+                                        const blob = new Blob([JSON.stringify(payload)], { type: "application/json" });
+                                        navigator.sendBeacon(url, blob);
+                                    } else {
+                                        fetch(url, {
+                                            method: "POST",
+                                            headers: { "Content-Type": "application/json" },
+                                            body: JSON.stringify(payload),
+                                            keepalive: true,
+                                        }).catch(() => { /* ignored */ });
+                                    }
+                                }
+                            } catch {
+                                // ignore tracking errors
+                            }
+                        }}
                     >
                         Ir a recurso
                     </a>

@@ -1,2 +1,7 @@
-export { default } from "next-auth/middleware";
-export const config = { matcher: ["/dashboard/:path*"] };
+import { NextResponse } from "next/server";
+
+export default function middleware() {
+	return NextResponse.next();
+}
+
+export const config = { matcher: [] };

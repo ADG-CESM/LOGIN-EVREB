@@ -107,7 +107,15 @@ export default function LoginPage() {
                 </div>
             </main>
         }>
-            <LoginForm />
+            <div className="min-h-[60vh] flex items-center justify-center">
+                <div className="w-full max-w-sm bg-white rounded-2xl shadow p-6">
+                    <h1 className="text-xl font-semibold mb-2">Acceso eliminado</h1>
+                    <p className="text-gray-700">
+                        El sistema de inicio de sesión fue retirado. Puedes usar el contenido
+                        libremente desde el tablero.
+                    </p>
+                </div>
+            </div>
         </Suspense>
     );
 }

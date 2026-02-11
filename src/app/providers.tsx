@@ -1,13 +1,12 @@
 "use client";
 
-import { SessionProvider } from "next-auth/react";
 import React from "react";
 
 type Props = {
     children: React.ReactNode;
-    basePath?: string;
 };
 
-export default function Providers({ children, basePath = "/evreb/api/auth" }: Props) {
-    return <SessionProvider basePath={basePath}>{children}</SessionProvider>;
+export default function Providers({ children }: Props) {
+    // No-op provider: removed session handling and login logic
+    return <>{children}</>;
 }

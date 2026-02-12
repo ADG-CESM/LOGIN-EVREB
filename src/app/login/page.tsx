@@ -92,7 +92,7 @@ function LoginForm() {
                         {submitting ? "Ingresando…" : "Entrar"}
                     </button>
                 </form>
-                {/*<p className="muted">¿No tienes cuenta? <Link href="/register">Regístrate</Link></p>*/}
+
             </div>
         </main>
     );

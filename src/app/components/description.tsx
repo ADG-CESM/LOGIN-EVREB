@@ -49,7 +49,7 @@ export function Descripcion({ title, descripcion, url, urlMaterial, ubication, t
         };
     }, []);
 
-    // Close citation modal on Escape
+
     useEffect(() => {
         if (!showCitation) return;
         const onKey = (e: KeyboardEvent) => {
@@ -75,7 +75,7 @@ export function Descripcion({ title, descripcion, url, urlMaterial, ubication, t
             <span className="text-xs sm:text-xs text-slate-700 mt-1 mb-3 text-justify leading-relaxed">
                 {descripcion}
             </span>
-            {/* Audio element with native controls when the resource is audio */}
+
             {isAudio && (
                 <audio
                     ref={audioRef}
@@ -126,7 +126,7 @@ export function Descripcion({ title, descripcion, url, urlMaterial, ubication, t
                 )}
             </div>
 
-            {/* Modal de cita APA */}
+
             {showCitation && (
                 <div className="fixed inset-0 z-[999] flex items-center justify-center p-4">
                     <div

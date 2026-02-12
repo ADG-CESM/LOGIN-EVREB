@@ -150,20 +150,20 @@ body {
   font-size: 14px;
 }
 
-/*scrollbar */
+
 .hide-scrollbar {
   -ms-overflow-style: none;
-  /* IE and Edge */
+
   scrollbar-width: none;
-  /* Firefox */
+
 }
 
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
-  /* Chrome, Safari, Opera */
+
 }
 
-/* Custom scrollbar utility */
+
 :root {
   --scrollbar-bg: rgba(0, 0, 0, 0.06);
   --scrollbar-thumb: rgba(0, 0, 0, 0.2);
@@ -173,7 +173,7 @@ body {
 
 .custom-scrollbar {
   scrollbar-width: thin;
-  /* Firefox */
+
   scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-bg);
 }
 

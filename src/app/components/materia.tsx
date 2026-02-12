@@ -50,8 +50,7 @@ export function MateriaCard({
             onMouseLeave={() => setShowDescription(false)}
             className={`relative group p-3 sm:p-4 w-full sm:w-[260px] h-[240px] sm:h-[260px] min-w-0 rounded-2xl border border-indigo-100/70 bg-gradient-to-br from-indigo-100 to-blue-100 shadow-sm hover:shadow-lg transition-all duration-200 flex flex-col justify-between focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300 ${isSelected ? 'ring-2 ring-indigo-300 shadow-md' : ''}`}>
 
-            {/* Overlay Descripcion: focus en móviles (sm:hidden), hover en escritorio (sm:block) */}
-            {/* Móvil: aparece al enfocar el card o sus hijos */}
+
             <div className="absolute inset-0 z-20 opacity-0 pointer-events-none transition-opacity duration-200 block sm:hidden group-focus-within:opacity-100 group-focus-within:pointer-events-auto">
                 <div className="h-full">
                     <Descripcion
@@ -65,7 +64,7 @@ export function MateriaCard({
                     />
                 </div>
             </div>
-            {/* Escritorio y tablets (>= sm): aparece al hover - controlado por estado */}
+
             <div
                 className={`absolute inset-0 z-20 transition-opacity duration-200 hidden sm:block ${showDescription ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
                 onMouseEnter={() => setShowDescription(true)}
@@ -84,7 +83,7 @@ export function MateriaCard({
                 </div>
             </div>
 
-            {/* Imagen/preview */}
+
             <div className="w-full overflow-hidden rounded-xl flex-shrink-0 border border-white/60 bg-white/60 shadow-inner">
                 <Image
                     src={
@@ -103,13 +102,13 @@ export function MateriaCard({
                 />
             </div>
 
-            {/* Contenido principal */}
+
             <div className="mt-2 flex-1 flex flex-col justify-between">
                 <div>
                     <h3 title={title} className="text-sm font-semibold mb-1 text-center text-indigo-900">
                         {title}
                     </h3>
-                    {/* <p className="text-sm text-gray-600 mb-2">Tipo: {type}</p> */}
+
                 </div>
 
 
@@ -118,6 +117,3 @@ export function MateriaCard({
         </div>
     );
 }
-
-// Example usage:
-// <Materia title="Matemáticas I" url="https://example.com/matematicas" type="obligatoria" />

@@ -6,7 +6,7 @@ import { GraduationCap, Newspaper, Link as LinkIcon } from "lucide-react";
 export default function Portada() {
     return (
         <section className="relative isolate overflow-hidden">
-            {/* Fondo decorativo */}
+
             <div className="pointer-events-none absolute inset-0 -z-10">
                 <div className="absolute inset-0 bg-gradient-to-b from-indigo-50 via-white to-white" />
                 <div
@@ -21,7 +21,7 @@ export default function Portada() {
 
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
-                    {/* Texto principal */}
+
                     <div>
                         <span className="inline-flex items-center rounded-full bg-indigo-100/70 px-3 py-1 text-xs font-medium text-[#193d77] ring-1 ring-inset ring-indigo-200">
                             Navegación de Recursos Educativos
@@ -33,7 +33,7 @@ export default function Portada() {
 
                         </p>
 
-                        {/* Acciones */}
+
                         <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
                             <Link
                                 href="/dashboard/tablero"
@@ -41,38 +41,33 @@ export default function Portada() {
                             >
                                 Explorar tablero
                             </Link>
-                            {/*<a
-                                href="#features"
-                                className="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-[#193d77] ring-1 ring-inset ring-[#193d77]/30 shadow-sm hover:bg-[#193d77]/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#193d77]/40 active:scale-[0.99]"
-                            >
-                                Conocer más
-                            </a>*/}
+
                         </div>
 
-                        {/* Mini features */}
+
                         <dl className="mt-8 grid grid-cols-3 gap-4 max-w-md" id="features">
                             <div className="rounded-xl border border-indigo-100 bg-white p-3 text-center">
                                 <dt className="flex items-center justify-center gap-2 text-xs font-medium text-slate-500">
                                     <Newspaper className="h-4 w-4 text-[#193d77]" /> RUA
                                 </dt>
-                                {/* <dd className="mt-1 text-lg font-semibold text-slate-900">Recursos</dd>*/}
+
                             </div>
                             <div className="rounded-xl border border-indigo-100 bg-white p-3 text-center">
                                 <dt className="flex items-center justify-center gap-2 text-xs font-medium text-slate-500">
                                     <GraduationCap className="h-4 w-4 text-[#193d77]" /> CCH
                                 </dt>
-                                {/*<dd className="mt-1 text-lg font-semibold text-slate-900">Materiales</dd>*/}
+
                             </div>
                             <div className="rounded-xl border border-indigo-100 bg-white p-3 text-center">
                                 <dt className="flex items-center justify-center gap-2 text-xs font-medium text-slate-500">
                                     <LinkIcon className="h-4 w-4 text-[#193d77]" /> Referencias
                                 </dt>
-                                {/*<dd className="mt-1 text-lg font-semibold text-slate-900"></dd>*/}
+
                             </div>
                         </dl>
                     </div>
 
-                    {/* Visual lado derecho */}
+
                     <div className="relative order-first lg:order-last">
                         <div className="mx-auto w-full max-w-xl">
                             <div className="relative rounded-2xl border border-indigo-100 bg-white/80 p-3 shadow-sm backdrop-blur">

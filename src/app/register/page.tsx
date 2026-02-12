@@ -26,7 +26,7 @@ export default function RegisterPage() {
             body: JSON.stringify({ ...form, semestre: Number(form.semestre) })
         });
         if (res.ok) {
-            // Evita alert bloqueante y navega con una bandera para mostrar mensaje en login
+
             router.replace("/login?registered=1");
         } else {
             const data = await res.json().catch(() => ({}));

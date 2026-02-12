@@ -19,7 +19,7 @@ export default function Portada() {
                 />
             </div>
 
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-12 pt-36  sm:pb-20">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
 
                     <div>

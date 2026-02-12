@@ -10,7 +10,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="es">
       <body>
         <Providers>
-          {/* <Header />  Se elimina el header para acceso público sin sesión */}
+          {/* <Header /> */}
           {children}
         </Providers>
       </body>

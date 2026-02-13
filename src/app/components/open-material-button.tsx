@@ -1,42 +1,34 @@
 "use client";
 
 type Props = {
+  materialId?: string;
   title?: string;
   urlMaterial?: string;
   ubication?: string;
   type?: string;
+  onOpened?: () => void;
 };
 
-export default function OpenMaterialButton({ title, urlMaterial, ubication, type }: Props) {
+export default function OpenMaterialButton({ materialId, title, urlMaterial, ubication, type, onOpened }: Props) {
   if (!urlMaterial) {
     return <span className="opacity-60 text-xs">Sin enlace</span>;
   }
 
-  const TRACK_TTL_MS = 5 * 60 * 1000; // 5 minutos
-
   const handleClick = () => {
-    // Evita sumar múltiples veces en poco tiempo para el mismo material
+    // Registra SIEMPRE una vista por cada clic
     try {
-      const key = `metrics:view:${urlMaterial}`;
-      const now = Date.now();
-      const last = Number(localStorage.getItem(key) || 0);
-      if (isFinite(last) && now - last < TRACK_TTL_MS) {
-        // En ventana de enfriamiento, no enviar métrica
+      const payload = { materialId, title, urlMaterial, ubication, type };
+      const url = "/evreb/api/metrics/view";
+      if (navigator.sendBeacon) {
+        const blob = new Blob([JSON.stringify(payload)], { type: "application/json" });
+        navigator.sendBeacon(url, blob);
       } else {
-        localStorage.setItem(key, String(now));
-        const payload = { title, urlMaterial, ubication, type };
-        const url = "/evreb/api/metrics/view";
-        if (navigator.sendBeacon) {
-          const blob = new Blob([JSON.stringify(payload)], { type: "application/json" });
-          navigator.sendBeacon(url, blob);
-        } else {
-          fetch(url, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(payload),
-            keepalive: true,
-          }).catch(() => { /* ignored */ });
-        }
+        fetch(url, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+          keepalive: true,
+        }).catch(() => { /* ignored */ });
       }
     } catch {
       // ignore tracking errors
@@ -47,6 +39,12 @@ export default function OpenMaterialButton({ title, urlMaterial, ubication, type
     } catch {
       // Fallback to same-tab navigation
       window.location.href = urlMaterial;
+    }
+
+    try {
+      if (onOpened) onOpened();
+    } catch {
+      // ignore callback errors
     }
   };
 

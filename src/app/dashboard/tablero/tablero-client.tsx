@@ -1170,7 +1170,7 @@ const materialsByAulas: Record<string, Material[]> = {
 };
 
 export default function TableroClient() {
-    const [selectedAulasId, setSelectedAulasId] = useState<string | null>(null);
+    const [selectedAulasId, setSelectedAulasId] = useState<string | null>(String(aulas[0].id));
     const [selectedUbication, setSelectedUbication] = useState<'RUA' | 'CCH' | 'Referencias'>('RUA');
     const [selectedMaterialId, setSelectedMaterialId] = useState<number | null>(null);
 
@@ -1199,10 +1199,10 @@ export default function TableroClient() {
     }, [selectedAulasId, selectedUbication]);
 
     return (
-        <div className="h-[calc(100vh-87.5px)] sm:h-[calc(100vh-87.25px)] overflow-hidden flex flex-col pt-20">
+        <div className="h-[calc(100vh-87.5px)] sm:h-[calc(100vh)] overflow-hidden flex flex-col">
             <div className="flex flex-col sm:flex-row px-2 py-2">
                 <div
-                    className="flex sm:flex-col flex-row sm:border-r border-b sm:border-b-0 border-gray-200 w-full sm:w-fit gap-4 overflow-x-auto sm:overflow-y-auto max-h-[calc(100vh-100px)] pb-4 pt-4 sm:px-2 px-4 snap-x snap-mandatory scroll-smooth custom-scrollbar"
+                    className="flex sm:flex-col flex-row sm:border-r border-b sm:border-b-0 border-gray-200 w-full sm:w-fit gap-4 overflow-x-auto sm:overflow-y-auto max-h-[calc(100vh)] pb-4 pt-4 sm:px-2 px-4 snap-x snap-mandatory scroll-smooth custom-scrollbar"
                     style={{ WebkitOverflowScrolling: 'touch', touchAction: 'pan-x' }}
                 >
                     {aulas.map(aula => {
@@ -1255,13 +1255,7 @@ export default function TableroClient() {
                                         );
 
                                         const options: Array<{ label: string; value: 'RUA' | 'CCH' | 'Referencias'; icon: ReactNode; count: number; title: string }> = [
-                                            {
-                                                label: 'Referencias',
-                                                value: 'Referencias',
-                                                icon: <LinkIcon className="w-4 h-4" />,
-                                                count: counts.Referencias,
-                                                title: 'Referencias digitales externas'
-                                            },
+
                                             {
                                                 label: 'RUA',
                                                 value: 'RUA',
@@ -1276,6 +1270,14 @@ export default function TableroClient() {
                                                 count: counts.CCH,
                                                 title: 'Recursos del Portal Académico CCH'
                                             },
+                                            {
+                                                label: 'Referencias',
+                                                value: 'Referencias',
+                                                icon: <LinkIcon className="w-4 h-4" />,
+                                                count: counts.Referencias,
+                                                title: 'Referencias digitales externas'
+                                            },
+
 
                                         ];
 

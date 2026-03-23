@@ -9,21 +9,17 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@auth/pg-adapter": "^1.11.0",
-    "bcrypt": "^6.0.0",
+    "@meilisearch/instant-meilisearch": "^0.30.0",
     "lucide-react": "^0.546.0",
     "next": "15.5.5",
-    "next-auth": "^4.24.11",
-    "pg": "^8.16.3",
     "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react-dom": "19.1.0",
+    "react-instantsearch": "^7.27.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
-    "@types/bcrypt": "^6.0.0",
     "@types/node": "^20",
-    "@types/pg": "^8.15.5",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
